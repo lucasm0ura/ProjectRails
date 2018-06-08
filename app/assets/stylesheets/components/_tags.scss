@@ -1,0 +1,106 @@
+// ========================================================================= //
+//
+//   Tags
+//
+// ========================================================================= //
+
+.tags {
+  // position: relative;
+  // top: -55px;
+  left: 0;
+  display: none;
+  z-index: 2;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(0,0,0,.1) 0 1px 2px;
+}
+
+// ------------------------------------------------------------------------- //
+//   Scaffolding
+// ------------------------------------------------------------------------- //
+
+// ----- Tags Inner ----- //
+
+.tags-inner {
+  @include clearfix;
+  padding-top: 15px;
+  padding-bottom: 11px;
+}
+
+// ----- Tag Silo ----- //
+
+.tag-silo {
+
+  @media (min-width: 320px) {
+    float: left;
+    width: 50%;
+    margin-bottom: 4px;
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+
+  @media (min-width: 480px) {
+    width: 33.333333333%;
+  }
+
+  @media (min-width: 768px) {
+    width: 25%;
+  }
+
+  @media (min-width: 992px) {
+    width: 20%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 16.666666667%;
+  }
+}
+
+// ----- Tag ----- //
+
+.tag {
+  @include lato-bold;
+  @include size(100%, 25px);
+  @include text-overflow;
+  position: relative;
+  display: block;
+  padding-top: 0;
+  padding-right: 30px;
+  padding-left: 10px;
+  color: $graphite-03;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: left;
+  background-color: $mono-01;
+  border: none;
+  border-radius: 2px;
+  transition: .3s background-color;
+
+  i {
+    @include square(25px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    opacity: 0;
+    transition: .3s opacity;
+  }
+
+  &:focus,
+  &:hover {
+    color: $graphite-03;
+    text-decoration: none;
+    background-color: darken($mono-01, 10%);
+
+    i {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    color: $graphite-03;
+    background-color: darken($mono-01, 15%);
+  }
+}

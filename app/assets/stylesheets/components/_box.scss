@@ -1,0 +1,199 @@
+// ========================================================================= //
+//
+//   Box
+//$mono-02
+// ========================================================================= //
+
+.box {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+// ------------------------------------------------------------------------- //
+//   Modifiers
+// ------------------------------------------------------------------------- //
+
+// ----- Themes ----- //
+
+.box-default {
+  box-shadow: rgba(120,120,120,.1) 0 1px 5px;
+  transition: .3s box-shadow;
+
+  &:focus,
+  &:hover {
+    box-shadow: rgba(120,120,120,.2) 0 2px 5px;
+  }
+}
+
+.box-transparent { }
+
+// ------------------------------------------------------------------------- //
+//   Scaffolding
+// ------------------------------------------------------------------------- //
+
+// ----- Box Head ----- //
+
+.box-head {
+  position: relative;
+  padding-right: 172px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom: $graphite-01 solid 1px;
+}
+
+// Modifiers
+
+.box-head-default {
+  padding-left: 24px;
+  background-color: white;
+}
+
+.box-head-transparent { }
+
+// ----- Box Title ----- //
+
+.box-title {
+  @include text-overflow;
+  height: 38px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $brand-01;
+  font-size: 22px;
+  line-height: 38px;
+}
+
+// Modifiers - Themes
+
+.box-title-default {
+  color: $graphite-03;
+}
+
+.box-title-primary {
+  color: $brand-01;
+}
+
+// Modifiers - Size
+
+.box-title-sm {
+  @include lato-bold;
+  font-size: 18px;
+}
+
+.box-title-lg {
+  font-size: 24px;
+}
+
+// ----- Box Tools ----- //
+
+.box-tools {
+  @include clearfix;
+  @include list-unstyled;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 0;
+
+  > li {
+    float: left;
+
+    a,
+    button {
+      display: block;
+      height: 38px;
+      padding-top: 0;
+      padding-right: 6px;
+      padding-left: 6px;
+      font-size: 24px;
+      line-height: 42px;
+      text-align: center;
+      background-color: transparent;
+      border: none;
+
+      &:not(.filter) {
+
+        i {
+          color: $graphite-03;
+        }
+
+        &:hover {
+
+          i {
+            color: $brand-01;
+          }
+        }
+
+        &:active {
+
+          i {
+            color: darken($brand-01, 10%);
+          }
+        }
+      }
+
+      &.filter {
+        width: 38px;
+        margin-left: 6px;
+        color: white;
+        background-color: $graphite-02;
+        border-top-right-radius: 5px;
+        transition: .3s background-color;
+
+        &:focus,
+        &:hover {
+          background-color: $brand-01;
+        }
+
+        &:active {
+          background-color: darken($brand-01, 10%);
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .dropdown-menu {
+      right: 0;
+      left: initial;
+      padding: 10px 25px;
+    }
+  }
+}
+
+  .box-head-transparent {
+    .box-tools {
+      .filter {
+        border-top-left-radius: 5px;
+      }
+    }
+  }
+
+// ----- Box Body ----- //
+
+.box-body {
+
+  p {
+    line-height: 21px;
+
+    small {
+      display: block;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+// Modifiers
+
+.box-body-default {
+  padding: 20px;
+  background-color: white;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.box-body-transparent {
+  padding: 10px;
+}

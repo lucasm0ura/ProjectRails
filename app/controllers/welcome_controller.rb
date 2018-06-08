@@ -6,8 +6,4 @@ class WelcomeController < ActionController::Base
     
   end
   
-  def testemarlon
-    
-  end
-  
 end

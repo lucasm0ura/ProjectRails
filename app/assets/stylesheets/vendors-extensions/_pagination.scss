@@ -1,0 +1,53 @@
+// ========================================================================= //
+//
+//   Pagination
+//
+// ========================================================================= //
+
+.pagination {
+  @include clearfix;
+  width: 100%;
+  text-align: center;
+
+  li {
+    display: inline-block;
+
+    a {
+      @include lato-bold;
+      @include square(40px);
+      padding: 0;
+      color: $graphite-03;
+      line-height: 40px;
+      text-align: center;
+      border: none;
+      box-shadow: rgba(0,0,0,0) 0 0 0;
+      transition: .3s color, .3s background-color, .3s box-shadow;
+
+      &:focus,
+      &:hover {
+        color: $graphite-03;
+        background-color: white;
+        box-shadow: rgba(0,0,0,.2) 0 1px 2px;
+      }
+
+      &:active {
+        color: $graphite-03;
+        background-color: white;
+        box-shadow: rgba(0,0,0,.1) 0 0 2px;
+      }
+    }
+
+    &.active {
+
+      a {
+        background-color: $brand-03;
+
+        &:focus,
+        &:hover {
+          color: #fff;
+          background-color: $brand-03;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,225 @@
+// ========================================================================= //
+//
+//   Buttons
+//
+// ========================================================================= //
+
+.btn {
+  @include lato-bold;
+  padding-top: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  &:not(.dropdown-toggle) {
+    vertical-align: middle;
+
+    [class*='icon-'] {
+      display: inline-block;
+      margin-top: -3px;
+      vertical-align: middle;
+
+      &.icon-left {
+        margin-right: 5px;
+      }
+
+      &.icon-right {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+// ------------------------------------------------------------------------- //
+//   Modifiers
+// ------------------------------------------------------------------------- //
+
+// ----- Colors ----- //
+
+// Button A
+
+@mixin btn-a {
+  color: $graphite-03;
+  color: $graphite-03;
+  background-color: $mono-01;
+  transition: .3s background-color;
+
+  &:focus {
+    color: $graphite-03;
+  }
+
+  &:hover {
+    color: $graphite-03;
+    background-color: darken($mono-01, 10%);
+  }
+
+  &:active {
+    color: $graphite-03;
+    background-color: darken($mono-01, 15%);
+  }
+}
+
+// Button B
+
+@mixin btn-b {
+  color: white;
+  background-color: $brand-02;
+  transition: .3s background-color;
+
+  &:not(.dropdown-toggle) {
+
+    [class*='icon-'] {
+      color: $orange-03;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    color: white;
+    background-color: $brand-01;
+
+    &:not(.dropdown-toggle) {
+
+      [class*='icon-'] {
+        color: #fff;
+      }
+    }
+  }
+
+  &:active {
+    color: white;
+    background-color: darken($orange-03, 10%);
+
+    &:not(.dropdown-toggle) {
+
+      [class*='icon-'] {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Button C
+
+@mixin btn-c {
+  color: white;
+  background-color: $graphite-02;
+  transition: .3s background-color;
+
+  &:not(.dropdown-toggle) {
+
+    [class*='icon-'] {
+      color: white;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    color: white;
+    background-color: $brand-03;
+
+    &:not(.dropdown-toggle) {
+
+      [class*='icon-'] {
+        color: white;
+      }
+    }
+  }
+
+  &:active {
+    color: white;
+    background-color: darken($brand-03, 10%);
+
+    &:not(.dropdown-toggle) {
+
+      [class*='icon-'] {
+        color: white;
+      }
+    }
+  }
+}
+
+// ----- Sizes ----- //
+
+// Button Extra Small
+
+.btn-xs {
+  height: 30px;
+  font-size: 13px;
+  line-height: 28px;
+
+  &:not(.dropdown-toggle) {
+
+    [class*='icon-'] {
+      font-size: 16px;
+    }
+  }
+}
+
+// Button Small
+
+.btn-sm {
+  height: 35px;
+  font-size: 13px;
+  line-height: 35px;
+
+  &:not(.dropdown-toggle) {
+
+    [class*='icon-'] {
+      font-size: 24px;
+    }
+  }
+}
+
+// Button Medium
+
+.btn-md {
+  height: 40px;
+  font-size: 13px;
+  line-height: 38px;
+
+  &:not(.dropdown-toggle) {
+
+    [class*='icon-'] {
+      font-size: 26px;
+    }
+  }
+}
+
+// Button Large
+
+.btn-lg {
+  height: 55px;
+  font-size: 16px;
+  line-height: 53px;
+
+  &:not(.dropdown-toggle) {
+
+    [class*='icon-'] {
+      font-size: 28px;
+    }
+  }
+}
+
+// ----- Themes ----- //
+
+// Button A
+
+.btn-a {
+  @include btn-a;
+}
+
+// Button B
+
+.btn-b {
+  @include btn-b;
+}
+
+// Button C
+
+.btn-c {
+  @include btn-c;
+}

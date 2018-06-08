@@ -1,0 +1,27 @@
+// ========================================================================= //
+//
+//   Mixins
+//
+// ========================================================================= //
+
+// ------------------------------------------------------------------------- //
+//   Face
+// ------------------------------------------------------------------------- //
+
+@mixin face($size, $border-radius: 0) {
+  @include square($size);
+  position: relative;
+  display: block;
+  background-color: $bc-dell-12;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  img {
+    @include square($size);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: $border-radius;
+  }
+}

@@ -1,0 +1,262 @@
+// ========================================================================= //
+//
+//   Typography
+//
+// ========================================================================= //
+
+// ------------------------------------------------------------------------- //
+//   Imports
+// ------------------------------------------------------------------------- //
+
+// ----- Lato ----- //
+
+@font-face {
+  font-family: 'Lato Light';
+  src: url('lato-light.eot');
+  src: url('lato-light.eot?#iefix') format('embedded-opentype'),
+       url('lato-light.woff') format('woff'),
+       url('lato-light.ttf') format('truetype'),
+       url('lato-light.svg#80d8021909d835b751af094d043ad177') format('svg');
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Lato Light';
+  src: url('lato-light-italic.eot');
+  src: url('lato-light-italic.eot?#iefix') format('embedded-opentype'),
+       url('lato-light-italic.woff') format('woff'),
+       url('lato-light-italic.ttf') format('truetype'),
+       url('lato-light-italic.svg#7015aa8810c4a9d1026a85e4ddcdf7a4') format('svg');
+  font-style: italic;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('lato-regular.eot');
+  src: url('lato-regular.eot?#iefix') format('embedded-opentype'),
+       url('lato-regular.woff') format('woff'),
+       url('lato-regular.ttf') format('truetype'),
+       url('lato-regular.svg#48e70b8825d557df57af3e4f7d4c31be') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('lato-regular-italic.eot');
+  src: url('lato-regular-italic.eot?#iefix') format('embedded-opentype'),
+       url('lato-regular-italic.woff') format('woff'),
+       url('lato-regular-italic.ttf') format('truetype'),
+       url('lato-regular-italic.svg#51ac4eb0bc1817d276ca824c5353e08f') format('svg');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('lato-bold.eot');
+  src: url('lato-bold.eot?#iefix') format('embedded-opentype'),
+       url('lato-bold.woff') format('woff'),
+       url('lato-bold.ttf') format('truetype'),
+       url('lato-bold.svg#eea591db52cf6ebc8992abb7621b9256') format('svg');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('lato-bold-italic.eot');
+  src: url('lato-bold-italic.eot?#iefix') format('embedded-opentype'),
+       url('lato-bold-italic.woff') format('woff'),
+       url('lato-bold-italic.ttf') format('truetype'),
+       url('lato-bold-italic.svg#030f5996dac0d7b15fbd4081adedf95b') format('svg');
+  font-style: italic;
+  font-weight: 700;
+}
+
+// ----- Post-Tracker ----- //
+
+@font-face {
+  font-family: 'post-tracker';
+  src: url('post-tracker.eot?2rgpx');
+  src: url('post-tracker.eot?#iefix2rgpx') format('embedded-opentype'),
+       url('post-tracker.woff?2rgpx') format('woff'),
+       url('post-tracker.ttf?2rgpx') format('truetype'),
+       url('post-tracker.svg?2rgpx#post-tracker') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// ------------------------------------------------------------------------- //
+//   Classes
+// ------------------------------------------------------------------------- //
+
+// ----- POSTracker ----- //
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-family: 'post-tracker';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+  transition: .3s color;
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+}
+
+.icon-photo:before        { content: '\e620'; }
+.icon-search:before       { content: '\e622'; }
+.icon-photo2:before       { content: '\e621'; }
+.icon-activation:before   { content: '\e600'; }
+.icon-alert:before        { content: '\e601'; }
+.icon-arrow-down:before   { content: '\e602'; }
+.icon-arrow-left:before   { content: '\e603'; }
+.icon-arrow-right:before  { content: '\e604'; }
+.icon-arrow-up:before     { content: '\e605'; }
+.icon-chart:before        { content: '\e606'; }
+.icon-check:before        { content: '\e607'; }
+.icon-close:before        { content: '\e608'; }
+.icon-coment:before       { content: '\e609'; }
+.icon-download:before     { content: '\e60a'; }
+.icon-edit:before         { content: '\e60b'; }
+.icon-excel:before        { content: '\e60c'; }
+.icon-filter:before       { content: '\e60d'; }
+.icon-flor-share:before   { content: '\e60e'; }
+.icon-form:before         { content: '\e60f'; }
+.icon-layout:before       { content: '\e610'; }
+.icon-local:before        { content: '\e611'; }
+.icon-lock:before         { content: '\e612'; }
+.icon-message:before      { content: '\e613'; }
+.icon-pdf:before          { content: '\e614'; }
+.icon-picture:before      { content: '\e615'; }
+.icon-plus:before         { content: '\e616'; }
+.icon-presence:before     { content: '\e617'; }
+.icon-price:before        { content: '\e618'; }
+.icon-print:before        { content: '\e619'; }
+.icon-sort:before         { content: '\e61a'; }
+.icon-tool:before         { content: '\e61b'; }
+.icon-trash:before        { content: '\e61c'; }
+.icon-unlock:before       { content: '\e61d'; }
+.icon-user:before         { content: '\e61e'; }
+.icon-visible:before      { content: '\e61f'; }
+.icon-exposition:before   { content: '\e800'; }
+.icon-floor-share:before  { content: '\e801'; }
+.icon-icon-door:before    { content: '\e802'; }
+.icon-icon-position:before { content: '\e803'; }
+.icon-material-pop:before { content: '\e804'; }
+.icon-star:before         { content: '\e901'; }
+.icon-conhecimento:before { content: '\e902'; }
+.icon-exibicao:before     { content: '\e903'; }
+.icon-comunicacao_visual:before { content: '\e904'; }
+.icon-manutencao:before   { content: '\e905'; }
+.icon-atendimento:before  { content: '\e906'; }
+.icon-search:before       { content: '\e986'; }
+.icon-mixe:before         { content: "\e90d"; }
+
+
+// ----- POSTracker ----- //
+
+@font-face {
+    font-family: 'PosTracker';
+    src:    url('PosTracker.eot?vlltni');
+    src:    url('PosTracker.eot?vlltni#iefix') format('embedded-opentype'),
+        url('PosTracker.ttf?vlltni') format('truetype'),
+        url('PosTracker.woff?vlltni') format('woff'),
+        url('PosTracker.svg?vlltni#PosTracker') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// ------------------------------------------------------------------------- //
+//   Classes
+// ------------------------------------------------------------------------- //
+
+// ----- POSTracker ----- //
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'PosTracker' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ranking:before { content: "\e900"; }
+.icon-medicine:before { content: "\e909"; }
+.icon-cleaner:before { content: "\e90a"; }
+.icon-lamp:before { content: "\e907"; }
+.icon-retail-mode:before { content: "\e908"; }
+.icon-activation:before { content: "\e600"; }
+.icon-alert:before { content: "\e601"; }
+.icon-arrow-down:before { content: "\e602"; }
+.icon-arrow-left:before { content: "\e603"; }
+.icon-arrow-right:before { content: "\e604"; }
+.icon-arrow-up:before { content: "\e605"; }
+.icon-chart:before { content: "\e606"; }
+.icon-check:before { content: "\e607"; }
+.icon-close:before { content: "\e608"; }
+.icon-coment:before { content: "\e609"; }
+.icon-download:before { content: "\e60a"; }
+.icon-edit:before { content: "\e60b"; }
+.icon-excel:before { content: "\e60c"; }
+.icon-filter:before { content: "\e60d"; }
+.icon-form:before { content: "\e60f"; }
+.icon-layout:before { content: "\e610"; }
+.icon-local:before { content: "\e611"; }
+.icon-lock:before { content: "\e612"; }
+.icon-message:before { content: "\e613"; }
+.icon-pdf:before { content: "\e614"; }
+.icon-picture:before { content: "\e615"; }
+.icon-plus:before { content: "\e616"; }
+.icon-presence:before { content: "\e617"; }
+.icon-price:before { content: "\e618"; }
+.icon-print:before { content: "\e619"; }
+.icon-sort:before { content: "\e61a"; }
+.icon-tool:before { content: "\e61b"; }
+.icon-trash:before { content: "\e61c"; }
+.icon-unlock:before { content: "\e61d"; }
+.icon-user:before { content: "\e61e"; }
+.icon-visible:before { content: "\e61f"; }
+.icon-exposition:before { content: "\e800"; }
+.icon-floor-share:before { content: "\e801"; }
+.icon-icon-door:before { content: "\e802"; }
+.icon-icon-position:before { content: "\e803"; }
+.icon-material-pop:before { content: "\e804"; }
+.icon-star:before { content: "\e901"; }
+.icon-conhecimento:before { content: "\e902"; }
+.icon-exibicao:before { content: "\e903"; }
+.icon-comunicacao_visual:before { content: "\e904"; }
+.icon-manutencao:before { content: "\e905"; }
+.icon-atendimento:before { content: "\e906"; }
+.icon-search:before { content: "\e986"; }
+.icon-mixe:before { content: "\e90d"; }
+
+// ------------------------------------------------------------------------- //
+//   Mixins
+// ------------------------------------------------------------------------- //
+
+// ----- Lato ----- //
+
+@mixin lato-light {
+  font-family: 'Lato Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+@mixin lato-regular {
+  font-family: 'Lato Regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+@mixin lato-bold {
+  font-family: 'Lato Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}

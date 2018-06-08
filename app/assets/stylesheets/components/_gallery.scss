@@ -1,0 +1,129 @@
+// ========================================================================= //
+//
+//   Gallery
+//
+// ========================================================================= //
+
+.gallery { }
+
+// ------------------------------------------------------------------------- //
+//   Scaffolding
+// ------------------------------------------------------------------------- //
+
+// ----- Photo ----- //
+
+.photo {
+  padding: 10px;
+
+  @media (min-width: 480px) {
+    width: 50%;
+  }
+
+  @media (min-width: 768px) {
+    width: 33.333333333%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 25%;
+  }
+}
+
+// ----- Photo Inner ----- //
+
+.photo-inner {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: rgba(120,120,120,.1) 0 1px 5px;
+  transition: .3s box-shadow;
+
+  .photo-header{
+    overflow: hidden;
+    height: 150px;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: rgba(120,120,120,.2) 0 2px 5px;
+  }
+}
+
+// ----- Photo Header ----- //
+
+.photo-header {
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-color: $graphite-03;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+}
+
+// ----- Photo Body ----- //
+
+.photo-body {
+  border-bottom: $graphite-01 solid 1px;
+}
+
+// ----- Photo Title ----- //
+
+.photo-title {
+  @include lato-bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px 15px;
+  color: $orange-02;
+  font-size: 16px;
+  line-height: normal;
+}
+
+// ----- Photo Footer ----- //
+
+.photo-footer {
+  position: relative;
+  padding: 15px 15px 38px 15px;
+
+  p {
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+// ----- Photo Comment ----- //
+
+.photo-comment {
+  @include size(32px, 28px);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: block;
+  padding: 0;
+  font-size: 32px;
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+
+  i {
+    color: $text-color;
+    transition: .3s color;
+  }
+
+  &:focus,
+  &:hover {
+
+    i {
+      color: $orange-02;
+    }
+  }
+
+  &:active {
+
+    i {
+      color: darken($orange-02, 10%);
+    }
+  }
+}

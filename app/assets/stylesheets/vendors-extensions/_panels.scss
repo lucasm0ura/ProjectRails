@@ -1,0 +1,97 @@
+// ========================================================================= //
+//
+//   Panels
+//
+// ========================================================================= //
+
+.panel {
+
+  &:first-child {
+
+    .panel-heading {
+      margin-top: -1px !important;
+    }
+  }
+}
+
+// ------------------------------------------------------------------------- //
+//   Modifiers
+// ------------------------------------------------------------------------- //
+
+// ----- Themes ----- //
+
+.panel-default {
+  border: none;
+}
+
+// ------------------------------------------------------------------------- //
+//   Scaffolding
+// ------------------------------------------------------------------------- //
+
+// ----- Panel Group ----- //
+
+.panel-group {
+  margin-bottom: 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+// ----- Panel Heading ----- //
+
+.panel-heading {
+  margin-top: 1px;
+  padding: 0;
+}
+
+// ----- Panel Title ----- //
+
+.panel-title {
+  background-color: transparent;
+
+  a {
+    @include text-overflow;
+    position: relative;
+    display: block;
+    padding: 10px 35px 10px 25px;
+    color: white;
+    font-size: 16px;
+    background-color: $brand-03;
+    transition: .3s background-color;
+
+    i {
+      @include rotate(-90deg);
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      margin-top: -14px;
+      font-size: 28px;
+      transition: .3s transform;
+    }
+
+    &:not(.collapsed) {
+
+      i {
+        @include rotate(0);
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: lighten($brand-03, 10%);
+    }
+
+    &:active {
+      background-color: darken($brand-03, 10%);
+    }
+  }
+}
+
+// ----- Panel Collapse ----- //
+
+.panel-collapse { }
+
+// ----- Panel Body ----- //
+
+.panel-body {
+  padding: 0;
+}

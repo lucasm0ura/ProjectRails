@@ -1,0 +1,57 @@
+// ========================================================================= //
+//
+//   Shame
+//
+// ========================================================================= //
+
+// ------------------------------------------------------------------------- //
+//   Bootstrap - Browser and device support
+//   Internet Explorer 10 in Windows 8 and Windows Phone 8
+//   http://getbootstrap.com/getting-started/#support-ie10-width
+// ------------------------------------------------------------------------- //
+
+@-moz-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@-webkit-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+// ------------------------------------------------------------------------- //
+//   Bootstrap - Browser and device support
+//   Printing
+//   http://getbootstrap.com/getting-started/#support-printing
+// ------------------------------------------------------------------------- //
+
+@media print {
+
+  .container {
+    width: auto;
+  }
+}
+
+// ------------------------------------------------------------------------- //
+//   Fix for the Firefox => 20 ~ 29 box-sizing bug.
+// ------------------------------------------------------------------------- //
+
+* {
+  -moz-box-sizing: border-box;
+
+  &:before,
+  &:after {
+    -moz-box-sizing: border-box;
+  }
+}

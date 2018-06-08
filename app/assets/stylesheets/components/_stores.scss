@@ -1,0 +1,262 @@
+// ========================================================================= //
+//
+//   Stores
+//
+// ========================================================================= //
+
+.stores {
+  position: absolute;
+  top: 50%;
+  right: 368px;
+  margin-top: -18px;
+  font-size: 12px;
+}
+
+.stores-numbers {
+
+  span {
+    color: $brand-01;
+  }
+}
+
+.stores-percentage {
+  @include size(140px, 15px);
+  background-color: $graphite-01;
+}
+
+.stores-percent {
+  @include size(140px, 15px);
+  position: relative;
+  background-color: $brand-01;
+
+  strong {
+    position: absolute;
+    top: -1px;
+  }
+
+  &.stores-percent-0    { width: 0%; }
+  &.stores-percent-1    { width: 1%; }
+  &.stores-percent-2    { width: 2%; }
+  &.stores-percent-3    { width: 3%; }
+  &.stores-percent-4    { width: 4%; }
+  &.stores-percent-5    { width: 5%; }
+  &.stores-percent-6    { width: 6%; }
+  &.stores-percent-7    { width: 7%; }
+  &.stores-percent-8    { width: 8%; }
+  &.stores-percent-9    { width: 9%; }
+
+  &.stores-percent-10   { width: 10%; }
+  &.stores-percent-11   { width: 11%; }
+  &.stores-percent-12   { width: 12%; }
+  &.stores-percent-13   { width: 13%; }
+  &.stores-percent-14   { width: 14%; }
+  &.stores-percent-15   { width: 15%; }
+  &.stores-percent-16   { width: 16%; }
+  &.stores-percent-17   { width: 17%; }
+  &.stores-percent-18   { width: 18%; }
+  &.stores-percent-19   { width: 19%; }
+
+  &.stores-percent-0,
+  &.stores-percent-1,
+  &.stores-percent-2,
+  &.stores-percent-3,
+  &.stores-percent-4,
+  &.stores-percent-5,
+  &.stores-percent-6,
+  &.stores-percent-7,
+  &.stores-percent-8,
+  &.stores-percent-9,
+  &.stores-percent-10,
+  &.stores-percent-11,
+  &.stores-percent-12,
+  &.stores-percent-13,
+  &.stores-percent-14,
+  &.stores-percent-15,
+  &.stores-percent-16,
+  &.stores-percent-17,
+  &.stores-percent-18,
+  &.stores-percent-19 {
+
+    strong {
+      right: -25px;
+    }
+  }
+
+  &.stores-percent-20   { width: 20%; }
+  &.stores-percent-21   { width: 21%; }
+  &.stores-percent-22   { width: 22%; }
+  &.stores-percent-23   { width: 23%; }
+  &.stores-percent-24   { width: 24%; }
+  &.stores-percent-25   { width: 25%; }
+  &.stores-percent-26   { width: 26%; }
+  &.stores-percent-27   { width: 27%; }
+  &.stores-percent-28   { width: 28%; }
+  &.stores-percent-29   { width: 29%; }
+
+  &.stores-percent-30   { width: 30%; }
+  &.stores-percent-31   { width: 31%; }
+  &.stores-percent-32   { width: 32%; }
+  &.stores-percent-33   { width: 33%; }
+  &.stores-percent-34   { width: 34%; }
+  &.stores-percent-35   { width: 35%; }
+  &.stores-percent-36   { width: 36%; }
+  &.stores-percent-37   { width: 37%; }
+  &.stores-percent-38   { width: 38%; }
+  &.stores-percent-39   { width: 39%; }
+
+  &.stores-percent-40   { width: 40%; }
+  &.stores-percent-41   { width: 41%; }
+  &.stores-percent-42   { width: 42%; }
+  &.stores-percent-43   { width: 43%; }
+  &.stores-percent-44   { width: 44%; }
+  &.stores-percent-45   { width: 45%; }
+  &.stores-percent-46   { width: 46%; }
+  &.stores-percent-47   { width: 47%; }
+  &.stores-percent-48   { width: 48%; }
+  &.stores-percent-49   { width: 49%; }
+
+  &.stores-percent-50   { width: 50%; }
+  &.stores-percent-51   { width: 51%; }
+  &.stores-percent-52   { width: 52%; }
+  &.stores-percent-53   { width: 53%; }
+  &.stores-percent-54   { width: 54%; }
+  &.stores-percent-55   { width: 55%; }
+  &.stores-percent-56   { width: 56%; }
+  &.stores-percent-57   { width: 57%; }
+  &.stores-percent-58   { width: 58%; }
+  &.stores-percent-59   { width: 59%; }
+
+  &.stores-percent-60   { width: 60%; }
+  &.stores-percent-61   { width: 61%; }
+  &.stores-percent-62   { width: 62%; }
+  &.stores-percent-63   { width: 63%; }
+  &.stores-percent-64   { width: 64%; }
+  &.stores-percent-65   { width: 65%; }
+  &.stores-percent-66   { width: 66%; }
+  &.stores-percent-67   { width: 67%; }
+  &.stores-percent-68   { width: 68%; }
+  &.stores-percent-69   { width: 69%; }
+
+  &.stores-percent-70   { width: 70%; }
+  &.stores-percent-71   { width: 71%; }
+  &.stores-percent-72   { width: 72%; }
+  &.stores-percent-73   { width: 73%; }
+  &.stores-percent-74   { width: 74%; }
+  &.stores-percent-75   { width: 75%; }
+  &.stores-percent-76   { width: 76%; }
+  &.stores-percent-77   { width: 77%; }
+  &.stores-percent-78   { width: 78%; }
+  &.stores-percent-79   { width: 79%; }
+
+  &.stores-percent-80   { width: 80%; }
+  &.stores-percent-81   { width: 81%; }
+  &.stores-percent-82   { width: 82%; }
+  &.stores-percent-83   { width: 83%; }
+  &.stores-percent-84   { width: 84%; }
+  &.stores-percent-85   { width: 85%; }
+  &.stores-percent-86   { width: 86%; }
+  &.stores-percent-87   { width: 87%; }
+  &.stores-percent-88   { width: 88%; }
+  &.stores-percent-89   { width: 89%; }
+
+  &.stores-percent-90   { width: 90%; }
+  &.stores-percent-91   { width: 91%; }
+  &.stores-percent-92   { width: 92%; }
+  &.stores-percent-93   { width: 93%; }
+  &.stores-percent-94   { width: 94%; }
+  &.stores-percent-95   { width: 95%; }
+  &.stores-percent-96   { width: 96%; }
+  &.stores-percent-97   { width: 97%; }
+  &.stores-percent-98   { width: 98%; }
+  &.stores-percent-99   { width: 99%; }
+
+  &.stores-percent-100  { width: 100%; }
+
+  &.stores-percent-20,
+  &.stores-percent-21,
+  &.stores-percent-22,
+  &.stores-percent-23,
+  &.stores-percent-24,
+  &.stores-percent-25,
+  &.stores-percent-26,
+  &.stores-percent-27,
+  &.stores-percent-28,
+  &.stores-percent-29,
+  &.stores-percent-30,
+  &.stores-percent-31,
+  &.stores-percent-32,
+  &.stores-percent-33,
+  &.stores-percent-34,
+  &.stores-percent-35,
+  &.stores-percent-36,
+  &.stores-percent-37,
+  &.stores-percent-38,
+  &.stores-percent-39,
+  &.stores-percent-40,
+  &.stores-percent-41,
+  &.stores-percent-42,
+  &.stores-percent-43,
+  &.stores-percent-44,
+  &.stores-percent-45,
+  &.stores-percent-46,
+  &.stores-percent-47,
+  &.stores-percent-48,
+  &.stores-percent-49,
+  &.stores-percent-50,
+  &.stores-percent-51,
+  &.stores-percent-52,
+  &.stores-percent-53,
+  &.stores-percent-54,
+  &.stores-percent-55,
+  &.stores-percent-56,
+  &.stores-percent-57,
+  &.stores-percent-58,
+  &.stores-percent-59,
+  &.stores-percent-60,
+  &.stores-percent-61,
+  &.stores-percent-62,
+  &.stores-percent-63,
+  &.stores-percent-64,
+  &.stores-percent-65,
+  &.stores-percent-66,
+  &.stores-percent-67,
+  &.stores-percent-68,
+  &.stores-percent-69,
+  &.stores-percent-70,
+  &.stores-percent-71,
+  &.stores-percent-72,
+  &.stores-percent-73,
+  &.stores-percent-74,
+  &.stores-percent-75,
+  &.stores-percent-76,
+  &.stores-percent-77,
+  &.stores-percent-78,
+  &.stores-percent-79,
+  &.stores-percent-80,
+  &.stores-percent-81,
+  &.stores-percent-82,
+  &.stores-percent-83,
+  &.stores-percent-84,
+  &.stores-percent-85,
+  &.stores-percent-86,
+  &.stores-percent-87,
+  &.stores-percent-88,
+  &.stores-percent-89,
+  &.stores-percent-90,
+  &.stores-percent-91,
+  &.stores-percent-92,
+  &.stores-percent-93,
+  &.stores-percent-94,
+  &.stores-percent-95,
+  &.stores-percent-96,
+  &.stores-percent-97,
+  &.stores-percent-98,
+  &.stores-percent-99,
+  &.stores-percent-100 {
+
+    strong {
+      right: 2px;
+      color: white;
+    }
+  }
+}

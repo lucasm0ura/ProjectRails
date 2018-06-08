@@ -1,0 +1,396 @@
+// ========================================================================= //
+//
+//   Navbar
+//
+// ========================================================================= //
+
+.navbar {
+  border-bottom: none;
+}
+
+// ------------------------------------------------------------------------- //
+//   Modifiers
+// ------------------------------------------------------------------------- //
+
+// ----- Themes ----- //
+
+.navbar-app {
+  background-color: $orange-02;
+  box-shadow: rgba(0,0,0,.2) 0 1px 1px;
+}
+
+// ------------------------------------------------------------------------- //
+//   Scaffolding
+// ------------------------------------------------------------------------- //
+
+// ----- Navbar Toggle ----- //
+
+.navbar-toggle {
+  @include size(44px, 34px);
+  position: relative;
+  margin-right: 5px;
+  border: none;
+
+  .icon-bar {
+    @include opacity(1);
+    position: absolute;
+    left: 10px;
+    background-color: white !important;
+    transition: .3s background-color, .3s opacity, .3s transform;
+
+    & + .icon-bar {
+      margin-top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 10px;
+    }
+
+    &:nth-child(3) {
+      top: 16px;
+    }
+
+    &:nth-child(4) {
+      top: 16px;
+    }
+
+    &:nth-child(5) {
+      bottom: 10px;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    background-color: transparent !important;
+  }
+
+  &:not(.collapsed) {
+
+    .icon-bar {
+
+      &:nth-child(2) {
+        @include opacity(0);
+      }
+
+      &:nth-child(3) {
+        @include rotate(45deg);
+      }
+
+      &:nth-child(4) {
+        @include rotate(-45deg);
+      }
+
+      &:nth-child(5) {
+        @include opacity(0);
+      }
+    }
+  }
+}
+
+// ----- Navbar Trigger ----- //
+
+.navbar-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $orange-03;
+  border: none;
+  transition: .3s background-color;
+
+  @media (max-width: 767px) {
+    @include square(50px);
+  }
+
+  @media (min-width: 768px) {
+    @include square(60px);
+  }
+
+  span {
+    position: absolute;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s background-color, .3s opacity, .3s transform;
+
+    @media (max-width: 767px) {
+      left: 14px;
+      width: 22px;
+    }
+
+    @media (min-width: 768px) {
+      left: 18px;
+      width: 24px;
+    }
+
+    &:nth-child(1) {
+      opacity: 1;
+
+      @media (max-width: 767px) {
+        top: 18px;
+      }
+
+      @media (min-width: 768px) {
+        top: 22px;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+
+      @media (max-width: 767px) {
+        top: 24px;
+      }
+
+      @media (min-width: 768px) {
+        top: 29px;
+      }
+    }
+
+    &:nth-child(4) {
+      opacity: 1;
+
+      @media (max-width: 767px) {
+        bottom: 18px;
+      }
+
+      @media (min-width: 768px) {
+        bottom: 22px;
+      }
+    }
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $orange-03;
+
+    span {
+      background-color: white;
+    }
+  }
+
+  &:active {
+    background-color: darken($orange-03, 10%);
+
+    span {
+      background-color: white;
+    }
+  }
+}
+
+  .sb-active-left {
+
+    .navbar-trigger {
+      background-color: $orange-03;
+
+      span {
+        background-color: white;
+
+        &:nth-child(1) {
+          opacity: 0;
+        }
+
+        &:nth-child(2) {
+          @include rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          @include rotate(-45deg);
+        }
+
+        &:nth-child(4) {
+          opacity: 0;
+        }
+      }
+
+      &:hover {
+        background-color: $orange-03;
+      }
+
+      &:active {
+        background-color: darken($orange-03, 10%);
+      }
+    }
+  }
+
+// ----- Navbar Brand ----- //
+
+.navbar-brand {
+  position: absolute;
+  top: 0;
+  padding: 16px 0 0 0;
+
+  @media (max-width: 767px) {
+    @include size(61px, 50px);
+    left: 55px;
+  }
+
+  @media (min-width: 768px) {
+    @include size(122px, 60px);
+    left: 80px;
+    margin-left: 0 !important;
+  }
+
+  img {
+    display: block;
+
+    @media (max-width: 767px) {
+      @include size(61px, 10px);
+    }
+
+    @media (min-width: 768px) {
+      @include size(122px, 24px);
+    }
+  }
+}
+
+// ----- Navbar Collapse ----- //
+
+.navbar-collapse {
+
+  @media (max-width: 767px) {
+    border-color: darken($orange-03, 10%) !important;
+  }
+}
+
+// ----- Navbar Nav ----- //
+
+.navbar-nav {
+
+  > li {
+
+    > a {
+      color: white;
+      transition: .3s color, .3s background-color;
+
+      &.navbar-nav-notification {
+
+        @media (min-width: 768px) {
+          @include size(50px, 60px);
+          padding: 0;
+        }
+
+        i {
+          position: absolute;
+          top: 50%;
+          margin-top: -17px;
+          font-size: 34px;
+
+          @media (max-width: 767px) {
+            right: 15px;
+          }
+
+          @media (min-width: 768px) {
+            left: 50%;
+            margin-left: -17px;
+          }
+        }
+
+        span {
+          @include lato-bold;
+          @include square(20px);
+          position: absolute;
+          display: block;
+          color: $orange-02;
+          font-size: 10px;
+          line-height: 20px;
+          text-align: center;
+          background-color: #fff;
+          border-radius: 10px;
+
+          @media (max-width: 767px) {
+            top: 2px;
+            right: 12px;
+          }
+
+          @media (min-width: 768px) {
+            top: 10px;
+            right: 6px;
+          }
+        }
+
+        strong {
+
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+      }
+
+      &.navbar-nav-user {
+
+        @media (max-width: 767px) {
+          padding: 10px 54px 5px 15px;
+        }
+
+        @media (min-width: 768px) {
+          height: 60px;
+          max-width: 180px;
+          padding: 10px 30px 0 15px;
+        }
+
+        i {
+          position: absolute;
+          top: 10px;
+          font-size: 24px;
+
+          @media (max-width: 767px) {
+            right: 21px;
+          }
+
+          @media (min-width: 768px) {
+            right: 7px;
+          }
+        }
+
+        span {
+          position: relative;
+          display: block;
+          padding-left: 9px;
+          font-size: 12px;
+
+          &:after {
+            @include square(4px);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -1px;
+            background-color: $green-01;
+            border-radius: 2px;
+            content: '';
+          }
+        }
+
+        strong {
+          @include text-overflow;
+          display: block;
+          font-size: 16px;
+        }
+      }
+
+      &:focus,
+      &:hover {
+        background-color: darken($orange-03, 5%) !important;
+      }
+
+      &:active {
+        background-color: darken($orange-03, 10%) !important;
+      }
+    }
+  }
+
+  .dropdown-menu {
+
+    @media (max-width: 767px) {
+      background-color: darken($orange-03, 10%) !important;
+    }
+
+    li {
+
+      a {
+
+        @media (max-width: 767px) {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

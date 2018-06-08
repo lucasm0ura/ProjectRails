@@ -1,0 +1,130 @@
+// ========================================================================= //
+//
+//   Switcher
+//
+// ========================================================================= //
+
+.switcher {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  padding-right: 60px;
+}
+
+// ------------------------------------------------------------------------- //
+//   Modifiers
+// ------------------------------------------------------------------------- //
+
+// ----- Themes ----- //
+
+.switcher-a {
+  color: $text-color;
+}
+
+.switcher-b {
+  color: white;
+}
+
+// ------------------------------------------------------------------------- //
+//   Scaffolding
+// ------------------------------------------------------------------------- //
+
+// ----- Switcher Control ----- //
+
+.switcher-control {
+  @include size(50px, 20px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+// Modifiers
+
+.switcher-control-a {
+  background-color: $graphite-01;
+  border-color: $graphite-01;
+}
+
+  .switcher.on {
+    .switcher-control-a {
+      background-color: $orange-01;
+      border-color: $orange-01;
+    }
+  }
+
+.switcher-control-b {
+  border-color: white;
+}
+
+// ----- Switcher Label ----- //
+
+.switcher-label {
+  @include lato-bold;
+  position: absolute;
+  top: 3.5px;
+  font-size: 9px;
+  text-transform: uppercase;
+  transition: .3s opacity;
+}
+
+// Modifiers - Position
+
+.switcher-label-left {
+  left: 8px;
+  opacity: 0;
+}
+
+.switcher-label-right {
+  right: 8px;
+}
+
+// Modifiers - Opacity
+
+.switcher.on {
+  .switcher-label-left {
+    color: $orange-02;
+    opacity: 1;
+  }
+  .switcher-label-right {
+    opacity: 0;
+  }
+}
+
+// ----- Switcher Dot ----- //
+
+.switcher-dot {
+  @include square(14px);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: .3s left;
+}
+
+// Modifiers - Position
+
+.switcher.on {
+  .switcher-dot {
+    left: 32px;
+  }
+}
+
+// Modifiers - Themes
+
+.switcher-dot-a {
+  background-color: $text-color;
+}
+
+  .switcher.on {
+    .switcher-dot-a {
+      background-color: $orange-02;
+    }
+  }
+
+.switcher-dot-b {
+  background-color: white;
+}

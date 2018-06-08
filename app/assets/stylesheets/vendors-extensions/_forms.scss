@@ -1,0 +1,72 @@
+// ========================================================================= //
+//
+//   Forms
+//
+// ========================================================================= //
+
+form { }
+
+// ------------------------------------------------------------------------- //
+//   Scaffolding
+// ------------------------------------------------------------------------- //
+
+// ----- Form Actions ----- //
+
+.form-actions {
+  @include clearfix;
+
+  .btn {
+    float: right;
+    margin-left: 10px;
+  }
+}
+
+// ----- Form Label ----- //
+
+.form-label {
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+
+// ----- Form Control ----- //
+
+.form-control {
+  padding-right: 12px;
+  padding-left: 12px;
+  color: $text-color;
+  border-color: $graphite-02;
+  border-radius: 3px;
+  box-shadow: none;
+
+  &:hover {
+    border-color: $brand-03;
+  }
+
+  &:focus {
+    border-color: darken($brand-03, 10%);
+    box-shadow: none;
+  }
+}
+
+// Modifiers
+
+input.form-control {
+  height: 35px;
+}
+
+textarea.form-control {
+  @include lato-bold;
+  min-height: 106px;
+}
+
+// ----- Checkbox/Radio ----- //
+
+.checkbox,
+.radio {
+
+  label {
+    @include lato-bold;
+    padding-left: 28px;
+    color: $graphite-03;
+  }
+}

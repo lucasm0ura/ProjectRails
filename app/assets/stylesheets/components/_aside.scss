@@ -1,0 +1,148 @@
+// ========================================================================= //
+//
+//   Aside
+//
+// ========================================================================= //
+
+.aside { }
+
+// ------------------------------------------------------------------------- //
+//   Modifiers
+// ------------------------------------------------------------------------- //
+
+// ----- Spacing ----- //
+
+.aside-left {
+  padding-top: 15px;
+}
+
+.aside-right { }
+
+// ------------------------------------------------------------------------- //
+//   Scaffolding
+// ------------------------------------------------------------------------- //
+
+// ----- Aside Section ----- //
+
+.aside-section { }
+
+// ----- Aside Link/Toggle ----- //
+
+.aside-link,
+.aside-toggle {
+  @include text-overflow;
+  position: relative;
+  display: block;
+  height: 35px;
+  padding-right: 50px;
+  padding-left: 53px;
+  color: white;
+  font-size: 16px;
+  line-height: 32px;
+  border-left: transparent solid 5px;
+  transition: .3s color, .3s border-left-color;
+
+  i {
+    position: absolute;
+    top: 50%;
+    color: white;
+
+    &:not(.icon-arrow-right) {
+      margin-top: -15px;
+      left: 15px;
+      font-size: 30px;
+    }
+
+    &.icon-arrow-right {
+      right: 45px;
+      margin-top: -14px;
+      font-size: 28px;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    color: white;
+
+    i {
+      color: white;
+    }
+  }
+
+  &:active {
+    color: $orange-03;
+
+    i {
+      color: $orange-03;
+    }
+  }
+}
+
+// ----- Aside Link ----- //
+
+.aside-link {
+
+  &:hover {
+    text-decoration: none;
+    background-color: $brand-03;
+  }
+}
+
+// ----- Aside Toggle ----- //
+
+.aside-toggle {
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+
+  i {
+    transition: .3s transform;
+  }
+
+  &:not(.collapsed) {
+    color: $brand-01;
+    border-left-color: $brand-01;
+
+    i {
+      color: $brand-01;
+
+      &.icon-arrow-right {
+        @include rotate(90deg);
+      }
+    }
+  }
+}
+
+// ----- Aside List ----- //
+
+.aside-list {
+  @include list-unstyled;
+  margin-bottom: 0;
+  background-color: $mono-02;
+
+  li {
+
+    a {
+      @include text-overflow;
+      display: block;
+      height: 34px;
+      padding-right: 75px;
+      padding-left: 60px;
+      color: white;
+      line-height: 34px;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:hover,
+      &:active,
+      &.active {
+        color: white;
+      }
+    }
+  }
+}

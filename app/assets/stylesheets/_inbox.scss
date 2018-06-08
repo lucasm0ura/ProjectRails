@@ -1,0 +1,34 @@
+// ========================================================================= //
+//
+//   Inbox
+//
+// ========================================================================= //
+
+#__bs_notify__ {
+  top: initial !important;
+  bottom: 0;
+  padding: 5px 10px 3px 10px !important;
+  border-bottom-left-radius: 0 !important;
+  opacity: .3;
+}
+
+@-moz-document url-prefix() {
+
+  fieldset {
+    display: table-cell;
+  }
+}
+
+.checkbox {
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.table-bordered > tbody > tr > td {
+
+  @media (max-width: 767px) {
+    border-bottom: none;
+  }
+}

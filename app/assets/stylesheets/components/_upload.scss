@@ -1,0 +1,51 @@
+// ========================================================================= //
+//
+//   Upload
+//
+// ========================================================================= //
+
+.upload {
+  position: relative;
+  height: 35px;
+  border: $graphite-02 solid 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: .3s color, .3s border-color;
+
+  span {
+    display: block;
+    height: 33px;
+    padding-right: 12px;
+    padding-left: 12px;
+    line-height: 30px;
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -12px;
+    font-size: 24px;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 35px;
+    opacity: 0;
+  }
+
+  &:focus,
+  &:hover {
+    color: $orange-02;
+    border-color: $orange-02;
+  }
+
+  &:active {
+    color: darken($orange-02, 10%);
+    border-color: darken($orange-02, 10%);
+  }
+}

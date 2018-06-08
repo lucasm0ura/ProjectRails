@@ -1,0 +1,192 @@
+// ========================================================================= //
+//
+//   Tables
+//
+// ========================================================================= //
+
+.table {
+
+  tr {
+    transition: .3s background-color;
+  }
+
+  th,
+  td {
+    vertical-align: middle !important;
+  }
+
+  thead {
+
+    tr {
+
+      th { }
+    }
+  }
+
+  tbody {
+
+    tr {
+
+      td {
+
+        strong {
+          @include lato-bold;
+          color: $brand-01;
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------------------------------------------------- //
+//   Modifiers
+// ------------------------------------------------------------------------- //
+
+// ----- Table Accordion/Stats ----- //
+
+.table-accordion,
+.table-stats {
+  margin-bottom: 0;
+
+  th,
+  td {
+    border-color: darken($graphite-01, 5%) !important;
+
+    &.center {
+      width: 120px;
+      text-align: center;
+    }
+
+    &.percent {
+      width: 360px;
+    }
+
+    &.product {
+      padding-right: 25px;
+      padding-left: 25px;
+      text-align: right;
+    }
+  }
+
+  th {
+    color: $graphite-03;
+    background-color: $mono-01;
+    border-bottom-width: 1px !important;
+
+    &.percent {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+  }
+
+  td {
+
+    small {
+      @include lato-bold;
+    }
+
+    &.percent {
+      position: relative;
+      padding-right: 104px;
+      padding-left: 0;
+    }
+  }
+}
+
+.table-accordion {
+
+  td {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+}
+
+.table-stats {
+
+  td {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+}
+
+.table-uppercase {
+  text-transform: uppercase;
+}
+
+// ----- Table Index ----- //
+
+.table-index {
+  margin-bottom: 0;
+
+  td {
+    padding: 6px 12px 6px 12px !important;
+    border-top: none !important;
+    border-bottom: $graphite-01 solid 1px;
+
+    strong {
+      font-size: 16px;
+    }
+  }
+}
+
+// ------------------------------------------------------------------------- //
+//   Scaffolding
+// ------------------------------------------------------------------------- //
+
+// ----- Table Responsive ----- //
+
+.table-responsive {
+
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+  }
+}
+
+// ----- Table Tools ----- //
+
+.table-tools {
+  @include clearfix;
+  @include list-unstyled;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  margin-top: -13px;
+  margin-bottom: 0;
+
+  > li {
+    float: left;
+
+    a,
+    button {
+      display: block;
+      height: 25px;
+      padding-top: 0;
+      padding-right: 3px;
+      padding-left: 3px;
+      font-size: 20px;
+      text-align: center;
+      background-color: transparent;
+      border: none;
+      transition: .3s color;
+
+      i {
+        color: $graphite-02;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        i {
+          color: $brand-01;
+        }
+      }
+
+      &:active {
+
+        i {
+          color: darken($brand-01, 10%);
+        }
+      }
+    }
+  }
+}

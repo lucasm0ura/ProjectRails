@@ -1,0 +1,110 @@
+// ========================================================================= //
+//
+//   Round
+//
+// ========================================================================= //
+
+.round {
+  @include square(60px);
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 40px;
+  line-height: 64px;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  transition: .3s background-color, .3s box-shadow, .3s transform;
+
+  &:focus,
+  &:hover {
+    @include translate(2px, -2px);
+    color: white;
+    text-decoration: none;
+  }
+
+  &:active {
+    @include translate(1px, -1px);
+  }
+}
+
+// ------------------------------------------------------------------------- //
+//   Modifiers
+// ------------------------------------------------------------------------- //
+
+// ----- Themes ----- //
+
+.round-blue {
+  background-color: $blue-02;
+
+  &:focus,
+  &:hover {
+    background-color: lighten($blue-02, 10%);
+    box-shadow: darken($blue-02, 15%) -2px 2px 0;
+  }
+
+  &:active {
+    background-color: darken($blue-02, 10%);
+    box-shadow: darken($blue-02, 15%) -1px 1px 0;
+  }
+}
+
+.round-gray {
+  background-color: $graphite-03;
+
+  &:focus,
+  &:hover {
+    background-color: lighten($graphite-03, 10%);
+    box-shadow: darken($graphite-03, 15%) -2px 2px 0;
+  }
+
+  &:active {
+    background-color: darken($graphite-03, 10%);
+    box-shadow: darken($graphite-03, 15%) -1px 1px 0;
+  }
+}
+
+.round-green {
+  background-color: $green-01;
+
+  &:focus,
+  &:hover {
+    background-color: lighten($green-01, 10%);
+    box-shadow: darken($green-01, 20%) -2px 2px 0;
+  }
+
+  &:active {
+    background-color: darken($green-01, 10%);
+    box-shadow: darken($green-01, 20%) -1px 1px 0;
+  }
+}
+
+.round-red {
+  background-color: $orange-02;
+
+  &:focus,
+  &:hover {
+    background-color: lighten($orange-02, 10%);
+    box-shadow: darken($orange-02, 20%) -2px 2px 0;
+  }
+
+  &:active {
+    background-color: darken($orange-02, 10%);
+    box-shadow: darken($orange-02, 20%) -1px 1px 0;
+  }
+}
+
+.round-yellow {
+  background-color: $brand-01;
+
+  &:focus,
+  &:hover {
+    background-color: lighten($brand-01, 10%);
+    box-shadow: darken($brand-01, 20%) -2px 2px 0;
+  }
+
+  &:active {
+    background-color: darken($brand-01, 10%);
+    box-shadow: darken($brand-01, 20%) -1px 1px 0;
+  }
+}

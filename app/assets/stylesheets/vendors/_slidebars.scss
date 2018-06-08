@@ -1,0 +1,169 @@
+// ========================================================================= //
+//
+//   Slidebars
+//   http://plugins.adchsm.me/slidebars/
+//
+// ========================================================================= //
+
+#sb-site,
+.sb-slidebar {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+}
+
+#sb-site {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: $body-bg;
+}
+
+.sb-slidebar {
+  position: fixed;
+  z-index: 0;
+  height: 100%;
+  background-color: $brand-01;
+  overflow-y: auto;
+  visibility: hidden;
+
+  @media (max-width: 767px) {
+    top: 60px;
+  }
+
+  @media (min-width: 768px) {
+    top: 60px;
+  }
+}
+
+.sb-left {
+  left: 0;
+}
+
+.sb-right {
+  right: 0;
+}
+
+html.sb-static {
+
+  .sb-slidebar {
+    position: absolute;
+  }
+}
+
+.sb-slidebar {
+  width: 30%;
+
+  @media (max-width: 480px) {
+    width: 70%;
+  }
+
+  @media (min-width: 481px) {
+    width: 55%;
+  }
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+
+  @media (min-width: 992px) {
+    width: 30%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 20%;
+  }
+
+  &.sb-active {
+    visibility: visible;
+  }
+
+  &.sb-static {
+    position: absolute;
+  }
+
+  &.sb-style-overlay {
+    z-index: 9999;
+  }
+}
+
+.sb-width-thin {
+  width: 15%;
+
+  @media (max-width: 480px) {
+    width: 55%;
+  }
+
+  @media (min-width: 481px) {
+    width: 40%;
+  }
+
+  @media (min-width: 768px) {
+    width: 25%;
+  }
+
+  @media (min-width: 992px) {
+    width: 15%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 5%;
+  }
+}
+
+.sb-width-wide {
+  width: 45%;
+
+  @media (max-width: 480px) {
+    width: 85%;
+  }
+
+  @media (min-width: 481px) {
+    width: 70%;
+  }
+
+  @media (min-width: 768px) {
+    width: 55%;
+  }
+
+  @media (min-width: 992px) {
+    width: 45%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 35%;
+  }
+}
+
+.sb-slide,
+#sb-site,
+.sb-slidebar {
+  -moz-transition: -moz-transform 400ms ease;
+  -ms-transition: -moz-transform 400ms ease;
+  -o-transition: -o-transform 400ms ease;
+  -webkit-transition: -webkit-transform 400ms ease;
+  transition: transform 400ms ease;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform, left, right;
+}
+
+.sb-hide {
+  display: none;
+}

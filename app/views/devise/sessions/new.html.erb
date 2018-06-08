@@ -1,0 +1,27 @@
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "passport"}) do |f| %>
+          <img src="/assets/icn-brand.png" alt="" class="passport-brand">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+            <div class="form-group">
+              <label for="login-email" class="form-label">Email</label>
+              <%= f.text_field :email, autofocus: true, class: "form-control", placeholder: "Email", required: true %>
+            </div>
+            <div class="form-group">
+              <label for="login-password" class="form-label">Password</label>
+              <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Senha", required: true %>
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <label for="login-remember">
+                  <%= f.check_box :remember_me, id: 'login-remember' %>Remember password
+                </label>
+              </div>
+            </div>
+            <%= f.submit "Sign in", class: 'btn btn-b btn-md'  %>
+          <% end %>
+        </div>
+      </div>
+    </div>

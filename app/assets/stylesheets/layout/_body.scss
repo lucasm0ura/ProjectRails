@@ -1,0 +1,63 @@
+// ========================================================================= //
+//
+//   Body
+//
+// ========================================================================= //
+
+body {
+  @include lato-regular;
+  color: $text-color;
+  background-color: $body-bg;
+
+  &.dashboard {
+
+    @media (max-width: 767px) {
+      padding-top: 105px;
+    }
+
+    @media (min-width: 768px) {
+      padding-top: 115px;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h1 {
+  @include lato-light;
+  font-size: 40px;
+}
+
+h2 {
+  @include lato-regular;
+  font-size: 22px;
+}
+
+h3 {
+  @include lato-regular;
+  font-size: 18px;
+}
+
+h4 {
+  @include lato-bold;
+  font-size: 16px;
+}
+
+h5 {
+  @include lato-bold;
+  font-size: 14px;
+}
+
+a {
+
+  &:focus {
+    text-decoration: none;
+  }
+}

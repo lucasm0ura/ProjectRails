@@ -1,0 +1,61 @@
+// ========================================================================= //
+//
+//   iCheck
+//   http://fronteed.com/iCheck/
+//
+// ========================================================================= //
+
+.icheck {
+//   @include at2x('plugins/icheck/icheck', 'png', 18px, 18px);
+  @include square(18px);
+  position: absolute;
+  top: 1px;
+  left: 0;
+  background-repeat: no-repeat;
+}
+
+// ------------------------------------------------------------------------- //
+//   Modifiers
+// ------------------------------------------------------------------------- //
+
+// ----- Types ----- //
+
+.icheck-checkbox {
+  background-position: 0 0;
+
+  &.hover {
+    background-position: -20px 0;
+  }
+
+  &.checked {
+    background-position: -40px 0;
+  }
+
+  &.disabled {
+    background-position: -60px 0;
+
+    &.checked {
+      background-position: -80px 0;
+    }
+  }
+}
+
+.icheck-radio {
+  background-position: -100px 0;
+
+  &.hover {
+    background-position: -120px 0;
+  }
+
+  &.checked {
+    background-position: -140px 0;
+  }
+
+  &.disabled {
+    background-position: -160px 0;
+
+    &.checked {
+      background-position: -180px 0;
+    }
+  }
+}

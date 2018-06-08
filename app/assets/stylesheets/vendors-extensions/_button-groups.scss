@@ -1,0 +1,22 @@
+// ========================================================================= //
+//
+//   Button Groups
+//
+// ========================================================================= //
+
+.btn-group {
+
+  .dropdown-toggle {
+    position: relative;
+    width: 30px !important;
+
+    [class*='icon-'] {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -10px;
+      margin-left: -12px;
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+// ========================================================================= //
+//
+//   Dropdowns
+//
+// ========================================================================= //
+
+.dropdown { }
+
+// ------------------------------------------------------------------------- //
+//   Modifiers
+// ------------------------------------------------------------------------- //
+
+// ----- Themes ----- //
+
+.navbar-app {
+
+  .dropdown {
+
+    &.open {
+
+      > a {
+        background-color: darken($orange-03, 10%) !important;
+      }
+    }
+  }
+}
+
+// ------------------------------------------------------------------------- //
+//   Scaffolding
+// ------------------------------------------------------------------------- //
+
+// ----- Dropdown Toggle ----- //
+
+.btn-group {
+
+  &.open {
+
+    .dropdown-toggle {
+      box-shadow: none;
+    }
+  }
+}
+
+// ----- Dropdown Menu ----- //
+
+.dropdown-menu {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(120,120,120,.2) 0 2px 5px;
+
+  li {
+
+    a {
+      @include lato-bold;
+      color: $graphite-03;
+
+      &:focus,
+      &:hover {
+        color: $brand-03;
+        background-color: transparent
+      }
+
+      &:active {
+        color: darken($brand-03, 10%);
+      }
+    }
+
+    &.divider {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      background-color: transparent;
+    }
+  }
+}
