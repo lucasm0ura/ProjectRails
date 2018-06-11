@@ -2,8 +2,8 @@ class PassthroughController < ApplicationController
   def index
 
     path = case current_user.role.name
-           when 'Administrator', 'Coordenador'
-            # maps_path
+           when 'Administrator'
+             dashboard_index_path
            else
            end
 

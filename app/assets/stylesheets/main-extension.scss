@@ -385,7 +385,7 @@
 
 .navbar-brand {
   left: 45%;
-  padding-top: 10px;
+  padding-top: 5px;
 
   img {
     @media (max-width: 767px) {
@@ -393,7 +393,7 @@
     }
 
     @media (min-width: 768px) {
-      @include size(auto, 40px);
+      @include size(130px, 50px);
     }
   }
 }
@@ -497,7 +497,7 @@
 }
 
 #main-menu .navbar-nav {
-  background-color: #EA3592
+  background-color: #000000
 }
 
 #main-menu {

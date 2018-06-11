@@ -8,18 +8,16 @@ class Ability
       can :manage, :all
     end
 
-    if user.role? :coordenador
-      can :manage, :ranking
-      can :manage, :map
-      can :manage, :picture
-      can :manage, Itinerary, id: managed_itineraries
-      can :manage, Picture, imageable_id: managed_itineraries, imageable_type: 'Itinerary'
-    end
+#     if user.role? :coordenador
+#       can :manage, :ranking
+#       can :manage, Itinerary, id: managed_itineraries
+#       can :manage, Picture, imageable_id: managed_itineraries, imageable_type: 'Itinerary'
+#     end
 
-    if user.role? :unidade
-      can :read, Itinerary, id: managed_itineraries
-      cannot :index, Itinerary
-    end
+#     if user.role? :unidade
+#       can :read, Itinerary, id: managed_itineraries
+#       cannot :index, Itinerary
+#     end
 
   end
 end
