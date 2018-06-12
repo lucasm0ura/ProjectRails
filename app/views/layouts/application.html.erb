@@ -42,13 +42,26 @@
 
           <% if can? :index, :dashboard %>
             <%= link_to dashboard_index_path, class: 'aside-link' do %>
-              <i class="icon-local"></i>MAPA</a></a>
+              <i class="glyphicon glyphicon-home" style="margin-top: -14px; font-size: 22px;"></i>DASHBOARD</a></a>
+            <% end %>
+          <% end %>
+
+        </div>
+        <div class="aside-section">
+
+          <% if can? :index, :client %>
+            <%= link_to clients_path, class: 'aside-link' do %>
+              <i class="glyphicon glyphicon-user" style="margin-top: -14px; font-size: 22px;"></i>CLIENTES</a></a>
             <% end %>
           <% end %>
 
         </div>
       </div>
     </div>
+
+   <div role="navigation" class="navbar navbar-fixed-bottom navbar-app">
+     
+   </div>
 
 </body>
 </html>

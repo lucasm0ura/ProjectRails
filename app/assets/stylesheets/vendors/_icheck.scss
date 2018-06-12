@@ -6,7 +6,7 @@
 // ========================================================================= //
 
 .icheck {
-//   @include at2x('plugins/icheck/icheck', 'png', 18px, 18px);
+  @include at2x('plugins/icheck/icheck', 'png', 18px, 18px);
   @include square(18px);
   position: absolute;
   top: 1px;

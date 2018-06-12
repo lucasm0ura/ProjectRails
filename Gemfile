@@ -57,5 +57,5 @@ gem "bower-rails", "~> 0.9.1"
 
 gem 'bootstrap-sass', '~> 3.3.4'
 
-gem 'icheck-rails'
+gem "bower-rails", "~> 0.9.1"
 

@@ -10,11 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
-
+ *= require nvd3
+ *= require angular-loading-bar
+ *= require fancybox/source/jquery.fancybox
  *= require_self
 */
+@import "retina.js/src/_retina.scss";
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import 'icheck/square/_all';
 @import "main";
 @import "main-extension";

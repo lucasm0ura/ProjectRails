@@ -1,0 +1,115 @@
+<%= form_for(@client, html: {class: "form-horizontal"}) do |f| %>
+  <div class="container-fluid shadow">
+    <div class="row">
+        <% if @client.errors.any? %>
+          <div id="valErr" class="row viewerror clearfix hidden">
+              <div class="alert alert-danger">
+                <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+                <ul>
+                  <% @client.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+          </div>        
+        <% end %>        
+
+      <div id="valOk" class="row viewerror clearfix hidden">
+          <div class="alert alert-success">Yay! ..</div>
+      </div>
+    </div>                     
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group" style="display: block;">
+                <label class="control-label control-label-left col-sm-3" for="field3">NOME DA EMPRESA</label>
+                <div class="controls col-sm-9">
+                    <input id="field3" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId1">
+                </div>
+            </div>
+            <div class="row" style="display: block;">
+                <div class="col-md-6">
+                    <div class="form-group" style="display: block;">
+                        <label class="control-label control-label-left col-sm-3" for="field2">CPF/CNPJ</label>
+                        <div class="controls col-sm-9">
+                            <input id="field2" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId2">
+                        </div>
+                    </div>
+                    <div class="form-group" style="display: block;">
+                        <label class="control-label control-label-left col-sm-3" for="field4">TELEFONE</label>
+                        <div class="controls col-sm-9">
+                            <input id="field4" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId3">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group" style="display: block;">
+                        <label class="control-label control-label-left col-sm-3" for="field12">RESPONSÁVEL</label>
+                        <div class="controls col-sm-9">
+                            <input id="field12" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId4">
+                        </div>
+                    </div>
+                    <div class="form-group" style="display: block;">
+                        <label class="control-label control-label-left col-sm-3" for="field5">EMAIL</label>
+                        <div class="controls col-sm-9">
+                            <input id="field5" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId5">
+                        </div>
+                    </div>
+                    <div class="form-group" style="display: block;">
+                        <label class="control-label control-label-left col-sm-3" for="field6">CELULAR</label>
+                        <div class="controls col-sm-9">
+                            <input id="field6" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group" style="display: block;">
+                <label class="control-label control-label-left col-sm-3" for="field7">CEP</label>
+                <div class="controls col-sm-9">
+                    <input id="field7" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId7">
+                </div>
+            </div>
+            <div class="form-group" style="display: block;">
+                <label class="control-label control-label-left col-sm-3" for="field11">ENDEREÇO</label>
+                <div class="controls col-sm-9">
+                    <input id="field11" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId8">
+                </div>
+            </div>
+            <div class="form-group" style="display: block;">
+                <label class="control-label control-label-left col-sm-3" for="field10">BAIRRO</label>
+                <div class="controls col-sm-9">
+                    <input id="field10" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId9">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group" style="display: block;">
+                <label class="control-label control-label-left col-sm-3" for="field9">CIDADE</label>
+                <div class="controls col-sm-9">
+                    <input id="field9" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId10">
+                </div>
+            </div>
+            <div class="form-group" style="display: block;">
+                <label class="control-label control-label-left col-sm-3" for="field8">ESTADO</label>
+                <div class="controls col-sm-9">
+                    <input id="field8" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId11">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+
+
+
+
+

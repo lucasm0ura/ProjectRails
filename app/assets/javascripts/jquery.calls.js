@@ -33,15 +33,15 @@ jQuery( document ).ready( function() {
 
   // Slidebars
 
-//  jQuery.slidebars();
+ jQuery.slidebars();
 
-//  jQuery('.sub-navbar-trigger').bind('click', function() {
+ jQuery('.sub-navbar-trigger').bind('click', function() {
 
-//    jQuery(this).toggleClass('active');
+   jQuery(this).toggleClass('active');
 
-//    jQuery('.tags').toggle();
+   jQuery('.tags').toggle();
 
-//  });
+ });
 
 
   jQuery('a[data-scroll]').click(function(){

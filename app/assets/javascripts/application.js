@@ -14,5 +14,28 @@
 //= require jquery_ujs
 //= require jquery.plugins
 //= require bootstrap-sprockets
-//= require icheck
+//= require angular
+//= require angular-i18n/angular-locale_pt-br
+//= require angular-resource
+//= require angular-animate
+//= require underscore
+//= require angularjs-nvd3-directives
+//= require d3
+//= require nvd3
+//= require angular-bootstrap
+//= require modernizr/modernizr.js
+//= require angular-google-maps
+//= require jquery-icheck
+//= require slidebars/distribution/0.9.4/slidebars.js
+//= require masonry/dist/masonry.pkgd.min.js
+//= require imagesloaded
+//= require angular-masonry-directive
+//= require fancybox/source/jquery.fancybox.pack.js
+//= require angular-loading-bar
+//= require front/app
+//= require responsive-calendar
+//= require_tree ./services
 //= require_tree .
+
+// Disables Dev mode for NVD3
+nv.dev = false;

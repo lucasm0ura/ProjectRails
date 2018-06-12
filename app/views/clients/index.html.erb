@@ -1,0 +1,62 @@
+<div id="sb-site">
+  <div class="sub-navbar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="sub-navbar-inner"><i class="sub-navbar-icon glyphicon glyphicon-user" style="font-size: 40px;"></i>
+            <h2 class="sub-navbar-title"></h2>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="content content-gray">
+    <div class="container">
+      <div class="row">
+        <div class="box-body box-body-transparent">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box box-default">
+                <div class="box-head box-head-default">
+                  <h3 class="box-title">CLIENTES</h3>
+                    <ul class="box-tools">
+                      <li role="presentation">
+                        <a href="<%= new_client_path %>">
+                          <button class="download">
+                            <i class="icon-plus"></i><span class="sr-only">Novo</span>
+                          </button>
+                         </a>
+                      </li>
+                    </ul>           
+                </div>
+                <div class="box-body box-body-default">
+                  <table class="table table-hover list-stores ">
+                    <thead>
+                      <tr>
+                        <th class="center">CPF/CNPJ</th>
+                        <th class="center">NOME DA LOJA</th>
+                        <th class="center">TELEFONE</th>
+                        <th class="center">DATA DE CADASTRO</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="center"><a target="_blank" href="#">{{row.store}}</a></td>
+                        <td class="center"><a target="_blank" href="#">{{row.state_code}}</a></td>
+                        <td class="center"><a target="_blank" href="#">{{row.city}}</a></td>
+                        <td class="center"><a target="_blank" href="#">{{row.city}}</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
