@@ -1,5 +1,56 @@
-<h1>New Client</h1>
+<div id="sb-site">
+  <div class="sub-navbar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="sub-navbar-inner"><i class="sub-navbar-icon glyphicon glyphicon-user" style="font-size: 40px;"></i>
+            <h2 class="sub-navbar-title"></h2>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
 
-<%= render 'form' %>
+  
+  <div class="content content-gray">
+    <div class="container">
+      <div class="row">
+        <div class="box-body box-body-transparent">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box box-default">
+                <div class="box-head box-head-default">
+                  <h3 class="box-title">CLIENTES</h3>
+                    <ul class="box-tools">
+                      <li role="presentation">
+                        <a href="<%= clients_path %>">
+                          <button class="download">
+                            <i class="icon-arrow-left"></i><span class="sr-only">Voltar</span>
+                          </button>
+                         </a>
+                      </li>
+                    </ul>           
+                </div>
+                <div class="box-body box-body-default">
+                <div class="row">
+                  <% if flash[:notice].present? %>
+                      <div id="valErr" class="row viewerror clearfix hidden">
+                          <div class="alert alert-danger">                
+                            <ul>
+                              <li><%= flash[:notice] %></li>
+                            </ul>
+                          </div>
+                      </div>  
+                  <% end %>
+                </div>                   
+                  <%= render 'form' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<%= link_to 'Back', clients_path %>
+      </div>
+    </div>
+  </div>
+</div>                

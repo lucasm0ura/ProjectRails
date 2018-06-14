@@ -5,6 +5,16 @@
 //
 // *************************************
 
+// Mascara de CPF e CNPJ
+var CpfCnpjMaskBehavior = function (val) {
+			return val.replace(/\D/g, '').length <= 11 ? '000.000.000-009' : '00.000.000/0000-00';
+		},
+    cpfCnpjpOptions = {
+    	onKeyPress: function(val, e, field, options) {
+      	field.mask(CpfCnpjMaskBehavior.apply({}, arguments), options);
+      }
+    };
+
 jQuery( document ).ready( function() {
 
   // Chosen
@@ -49,6 +59,24 @@ jQuery( document ).ready( function() {
     jQuery('html, body').animate({scrollTop: (jQuery(tag).offset().top - 120 )}, 'slow');
     return false;
   });
+  
+
+	$("#client_document").mask(CpfCnpjMaskBehavior, cpfCnpjpOptions);
+  $("#client_phone_number").mask('(00) 0000-0000');
+  $("#client_celphone").mask('(00) 0 0000-0000');
+  $("#client_zipcode").mask('00000-000');
+  
+  
+  $("#button_create_client").click(function(){
+    var phone = $("#client_phone_number").val();
+    var cellphone = $("#client_celphone").val();
+    
+    if (phone === "" && cellphone === ""){
+      alert('Digite o telefone ou celular');
+      event.preventDefault();
+    }    
+   });
+  
 
 });
 

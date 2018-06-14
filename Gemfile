@@ -59,3 +59,5 @@ gem 'bootstrap-sass', '~> 3.3.4'
 
 gem "bower-rails", "~> 0.9.1"
 
+gem 'maskedinput-rails'
+

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.plugins
+//= require jquery.mask
 //= require bootstrap-sprockets
 //= require angular
 //= require angular-i18n/angular-locale_pt-br

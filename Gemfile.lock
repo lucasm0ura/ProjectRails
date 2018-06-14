@@ -97,6 +97,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    maskedinput-rails (1.4.1.0)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -209,6 +210,7 @@ DEPENDENCIES
   draper (~> 2.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  maskedinput-rails
   rack-rewrite (~> 1.5.1)
   rails (= 4.2.6)
   rest-client

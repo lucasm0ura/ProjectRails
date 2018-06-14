@@ -35,19 +35,29 @@
                   <table class="table table-hover list-stores ">
                     <thead>
                       <tr>
-                        <th class="center">CPF/CNPJ</th>
-                        <th class="center">NOME DA LOJA</th>
-                        <th class="center">TELEFONE</th>
-                        <th class="center">DATA DE CADASTRO</th>
+                        <th>NOME DA LOJA</th>
+                        <th class="text-center">RESPONSÁVEL</th>
+                        <th class="text-center">TELEFONE</th>
+                        <th class="text-center">CELULAR</th>
+                        <th class="text-center">DATA DE CADASTRO</th>
+                        <th class="text-center">AÇÕES</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td class="center"><a target="_blank" href="#">{{row.store}}</a></td>
-                        <td class="center"><a target="_blank" href="#">{{row.state_code}}</a></td>
-                        <td class="center"><a target="_blank" href="#">{{row.city}}</a></td>
-                        <td class="center"><a target="_blank" href="#">{{row.city}}</a></td>
-                      </tr>
+                      <% @clients.each do |client| %>
+                        <tr>                        
+                            <td><a target="_blank" href="#"><%= client.name %></a></td>
+                            <td class="text-center"><a target="_blank" href="#"><%= client.contact_name %></a></td>
+                            <td class="text-center"><a target="_blank" href="#"><%= client.phone_number %></a></td>
+                            <td class="text-center"><a target="_blank" href="#"><%= client.celphone %></a></td>
+                            <td class="text-center"><a target="_blank" href="#"><%= client.created_at.strftime("%d/%m/%Y")  %></a></td> 
+                            <td class="text-center">
+                              <a target="_blank" href="#"><i class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="top" title="Editar"></i></a>
+                              <a target="_blank" href="#"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="Excluir"></i></a>
+                              <a target="_blank" href="#"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="top" title="Fazer Orçamento"></i></a>
+                            </td>
+                        </tr>
+                      <% end %>
                     </tbody>
                   </table>
                 </div>
