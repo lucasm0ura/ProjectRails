@@ -1,0 +1,27 @@
+<%= form_for(@service, html: {class: "form-horizontal", 'data-toggle' => "validator"}) do |f| %>
+  <div class="container-fluid">
+    <div class="row align-self-center">
+      <div class="col-md-10">
+        <div class="form-group">
+          <%= f.label 'NOME DO SERVIÇO'.to_s, class: "control-label control-label-left col-sm-3" %>
+            <div class="controls col-sm-9">
+              <%= f.text_field :name, class: "form-control k-textbox", :required => true  %>
+            </div>
+        </div>
+      </div>  
+      <div class="col-md-10">
+        <div class="form-group">
+          <%= f.label 'PREÇO', class: "control-label control-label-left col-sm-3" %>
+          <div class="controls col-sm-9">
+            <%= f.text_field :price, class: "form-control k-textbox", :required => true %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="col-md-2 col-md-offset-6">
+          <%= f.submit "Salvar", class: "btn btn-primary btn-lg", id: "button_create_client" %>
+        </div>   
+      </div>                   
+    </div>
+  </div>
+<% end %>

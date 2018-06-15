@@ -55,6 +55,12 @@
             <% end %>
           <% end %>
 
+          <% if can? :index, :service %>
+            <%= link_to services_path, class: 'aside-link' do %>
+              <i class="glyphicon glyphicon-wrench" style="margin-top: -14px; font-size: 22px;"></i>SERVIÇOS</a></a>
+            <% end %>
+          <% end %>
+
         </div>
       </div>
     </div>

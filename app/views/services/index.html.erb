@@ -1,0 +1,79 @@
+<div id="sb-site">
+  <div class="sub-navbar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="sub-navbar-inner"><i class="sub-navbar-icon glyphicon glyphicon-wrench" style="font-size: 40px;"></i>
+            <h2 class="sub-navbar-title"></h2>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="content content-gray">
+    <div class="container">
+      <div class="row">
+        <div class="box-body box-body-transparent">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box box-default">
+                <div class="box-head box-head-default">
+                  <h3 class="box-title">LISTA DE SERVIÇOS</h3>
+                    <ul class="box-tools">
+                      <li role="presentation">
+                        <a href="<%= new_service_path %>">
+                          <button class="download">
+                            <i class="icon-plus"></i><span class="sr-only">Novo</span>
+                          </button>
+                         </a>
+                      </li>
+                    </ul>           
+                </div>
+                <div class="box-body box-body-default">
+                <div class="row">
+                  <% if notice.present? %>
+                    <div class="alert alert-success">                
+                      <p id="notice"><%= notice %></p>
+                    </div> 
+                  <% end %>
+                </div>                   
+                  <table class="table table-hover list-stores ">
+                    <thead>
+                      <tr>
+                        <th>CÓDIGO</th>
+                        <th>NOME DO SERVIÇO</th>
+                        <th class="text-center">VALOR</th>
+                        <th class="text-center">DATA DE CRIAÇÃO</th>
+                        <th class="text-center">AÇÕES</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% @services.each do |service| %>
+                        <tr>
+                            <td><a target="_blank" href="#"><%= service.id %></a></td>
+                            <td><a target="_blank" href="#"><%= service.name %></a></td>
+                            <td class="text-center"><a target="_blank" href="#"><%= number_to_currency(service.price, :unit => "R$") %></a></td>
+
+                            <td class="text-center"><a target="_blank" href="#"><%= service.created_at.strftime("%d/%m/%Y")  %></a></td> 
+                            <td class="text-center">
+                              <a href="<%= edit_service_path(service) %>"><i class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="top" title="Editar"></i></a>
+                              <%= link_to service,  method: :delete, data: { confirm: 'Você tem certeza?' } do %>
+                                <i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="Excluir"></i>
+                              <% end %>
+                            </td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

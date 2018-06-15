@@ -65,6 +65,7 @@ jQuery( document ).ready( function() {
   $("#client_phone_number").mask('(00) 0000-0000');
   $("#client_celphone").mask('(00) 0 0000-0000');
   $("#client_zipcode").mask('00000-000');
+  $('#service_price').mask('000.000.000.000.000,00', {reverse: true});
   
   
   $("#button_create_client").click(function(){
