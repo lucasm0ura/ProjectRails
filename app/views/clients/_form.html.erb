@@ -5,7 +5,7 @@
         <div class="form-group">
           <%= f.label 'EMPRESA', class: "control-label control-label-left col-sm-3" %>
             <div class="controls col-sm-9">
-              <%= f.text_field :name, class: "form-control k-textbox" %>
+              <%= f.text_field :name, class: "form-control k-textbox", :required => true  %>
             </div>
         </div>
       </div>  
@@ -21,7 +21,7 @@
         <div class="form-group">
           <%= f.label 'RESPONSÁVEL', class: "control-label control-label-left col-sm-3" %>
           <div class="controls col-sm-9">
-            <%= f.text_field :contact_name, class: "form-control k-textbox" %>
+            <%= f.text_field :contact_name, class: "form-control k-textbox", :required => true  %>
           </div>
         </div>        
       </div> 
@@ -53,7 +53,7 @@
         <div class="form-group">
           <%= f.label 'CEP', class: "control-label control-label-left col-sm-3" %>
           <div class="controls col-sm-9">
-            <%= f.text_field :zipcode, class: "form-control k-textbox" %>
+            <%= f.text_field :zipcode, class: "form-control k-textbox", :required => true  %>
           </div>
         </div>          
       </div>       
@@ -61,7 +61,7 @@
         <div class="form-group">
           <%= f.label 'ENDEREÇO', class: "control-label control-label-left col-sm-3" %>
           <div class="controls col-sm-9">
-            <%= f.text_field :address, class: "form-control k-textbox" %>
+            <%= f.text_field :address, class: "form-control k-textbox", :required => true  %>
           </div>
         </div>        
       </div>
@@ -69,7 +69,7 @@
         <div class="form-group">
           <%= f.label 'BAIRRO', class: "control-label control-label-left col-sm-3" %>
           <div class="controls col-sm-9">
-            <%= f.text_field :neighborhood, class: "form-control k-textbox" %>
+            <%= f.text_field :neighborhood, class: "form-control k-textbox", :required => true  %>
           </div>
         </div>         
       </div>       
@@ -77,7 +77,7 @@
         <div class="form-group">
           <%= f.label 'CIDADE', class: "control-label control-label-left col-sm-3" %>
           <div class="controls col-sm-9">
-            <%= f.text_field :city, class: "form-control k-textbox" %>
+            <%= f.text_field :city, class: "form-control k-textbox", :required => true  %>
           </div>
         </div>        
       </div>
@@ -85,13 +85,13 @@
         <div class="form-group">
           <%= f.label 'ESTADO', class: "control-label control-label-left col-sm-3" %>
           <div class="controls col-sm-9">
-            <%= f.text_field :state, class: "form-control k-textbox" %>
+            <%= f.text_field :state, class: "form-control k-textbox", :required => true  %>
           </div>
         </div>           
       </div>
       <div class="col-md-10">
         <div class="col-md-2 col-md-offset-6">
-          <%= f.submit "Criar", class: "btn btn-primary btn-lg", id: "button_create_client" %>
+          <%= f.submit "Salvar", class: "btn btn-primary btn-lg", id: "button_create_client" %>
         </div>   
       </div>                   
   </div>

@@ -7,11 +7,6 @@ class ClientsController < ApplicationController
     @clients = Client.all
   end
 
-  # GET /clients/1
-  # GET /clients/1.json
-  def show
-  end
-
   # GET /clients/new
   def new
     @client = Client.new
@@ -19,6 +14,7 @@ class ClientsController < ApplicationController
 
   # GET /clients/1/edit
   def edit
+    set_client
   end
 
   # POST /clients
@@ -31,8 +27,7 @@ class ClientsController < ApplicationController
     
     respond_to do |format|
       if @client.save 
-        flash[:notice] = 'Client criado com Sucesso'
-        format.html { redirect_to clients_path }
+        format.html { redirect_to clients_path, notice: 'Cliente criado com sucesso.' }
       else
         format.html { render :new }
       end
@@ -43,8 +38,11 @@ class ClientsController < ApplicationController
   # PATCH/PUT /clients/1.json
   def update
     respond_to do |format|
-      if @client.update(client_params)
-        format.html { redirect_to @client, notice: 'Client was successfully updated.' }
+      @client.email = params[:email] if params[:email].present?
+      @client.phone_number = params[:phone_number] if params[:phone_number].present?
+      @client.celphone = params[:celphone] if params[:celphone].present?        
+      if @client.update(client_params)      
+        format.html { redirect_to clients_path, notice: 'Cliente alterado com sucesso.' }
         format.json { render :show, status: :ok, location: @client }
       else
         format.html { render :edit }
@@ -58,7 +56,7 @@ class ClientsController < ApplicationController
   def destroy
     @client.destroy
     respond_to do |format|
-      format.html { redirect_to clients_url, notice: 'Client was successfully destroyed.' }
+      format.html { redirect_to clients_url, notice: 'Cliente excluido com sucesso' }
       format.json { head :no_content }
     end
   end

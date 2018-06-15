@@ -20,7 +20,7 @@
             <div class="col-xs-12">
               <div class="box box-default">
                 <div class="box-head box-head-default">
-                  <h3 class="box-title">CLIENTES</h3>
+                  <h3 class="box-title">LISTA DE CLIENTES</h3>
                     <ul class="box-tools">
                       <li role="presentation">
                         <a href="<%= new_client_path %>">
@@ -32,9 +32,17 @@
                     </ul>           
                 </div>
                 <div class="box-body box-body-default">
+                <div class="row">
+                  <% if notice.present? %>
+                    <div class="alert alert-success">                
+                      <p id="notice"><%= notice %></p>
+                    </div> 
+                  <% end %>
+                </div>                   
                   <table class="table table-hover list-stores ">
                     <thead>
                       <tr>
+                        <th>CPF/CNPJ</th>
                         <th>NOME DA LOJA</th>
                         <th class="text-center">RESPONSÁVEL</th>
                         <th class="text-center">TELEFONE</th>
@@ -45,16 +53,19 @@
                     </thead>
                     <tbody>
                       <% @clients.each do |client| %>
-                        <tr>                        
+                        <tr>
+                            <td><a target="_blank" href="#"><%= client.document %></a></td>
                             <td><a target="_blank" href="#"><%= client.name %></a></td>
                             <td class="text-center"><a target="_blank" href="#"><%= client.contact_name %></a></td>
                             <td class="text-center"><a target="_blank" href="#"><%= client.phone_number %></a></td>
                             <td class="text-center"><a target="_blank" href="#"><%= client.celphone %></a></td>
                             <td class="text-center"><a target="_blank" href="#"><%= client.created_at.strftime("%d/%m/%Y")  %></a></td> 
                             <td class="text-center">
-                              <a target="_blank" href="#"><i class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="top" title="Editar"></i></a>
-                              <a target="_blank" href="#"><i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="Excluir"></i></a>
-                              <a target="_blank" href="#"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="top" title="Fazer Orçamento"></i></a>
+                              <a href="<%= edit_client_path(client) %>"><i class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="top" title="Editar"></i></a>
+                              <%= link_to client,  method: :delete, data: { confirm: 'Você tem certeza?' } do %>
+                                <i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="Excluir"></i>
+                              <% end %>
+                              <a href="#"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="top" title="Fazer Orçamento"></i></a>
                             </td>
                         </tr>
                       <% end %>

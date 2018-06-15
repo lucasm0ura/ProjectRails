@@ -20,7 +20,7 @@
             <div class="col-xs-12">
               <div class="box box-default">
                 <div class="box-head box-head-default">
-                  <h3 class="box-title">CLIENTES</h3>
+                  <h3 class="box-title">NOVO CLIENTE</h3>
                     <ul class="box-tools">
                       <li role="presentation">
                         <a href="<%= clients_path %>">
@@ -33,14 +33,10 @@
                 </div>
                 <div class="box-body box-body-default">
                 <div class="row">
-                  <% if flash[:notice].present? %>
-                      <div id="valErr" class="row viewerror clearfix hidden">
-                          <div class="alert alert-danger">                
-                            <ul>
-                              <li><%= flash[:notice] %></li>
-                            </ul>
-                          </div>
-                      </div>  
+                  <% if notice.present? %>
+                    <div class="alert alert-success">                
+                      <p id="notice"><%= notice %></p>
+                    </div>
                   <% end %>
                 </div>                   
                   <%= render 'form' %>
