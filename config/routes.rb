@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'estimate/client:references,'
+
+  get 'estimate/status:string,'
+
+  get 'estimate/price_total:string,'
+
+  get 'estimate/order_service_at:timestamp,'
+
+  get 'estimate/order_exit_at:timestamp'
+
   resources :services
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

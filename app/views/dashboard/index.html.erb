@@ -3,8 +3,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
-          <div class="sub-navbar-inner"><i class="sub-navbar-icon glyphicon glyphicon-home" style="font-size: 40px;"></i>
-            <h2 class="sub-navbar-title">DASHBOARD</h2>
+          <div class="sub-navbar-inner">
+             <i class="sub-navbar-icon glyphicon glyphicon-home" style="font-size: 40px;"></i>            
           </div>
         </div>
       </div>
@@ -14,26 +14,47 @@
 
   <div class="content content-gray">
     <div class="container">
-      <div class="box-body box-body-transparent">
-        <div class="row">
-          <div class="col-sm-12">
-              <ul class="list-group">
-                  <li class="list-group-item">Clientes Cadastrados<span class="badge">23</span></li>
-                  <li class="list-group-item">Orçamentos Feitos<span class="badge">23</span></li>
-                  <li class="list-group-item">Serviços Cadastrados<span class="badge">23</span></li>
-<!--                   <li class="list-group-item">Primera Semana<span class="badge">23</span></li>
-                  <li class="list-group-item">Primera Semana<span class="badge">23</span></li>
-                  <li class="list-group-item">Primera Semana<span class="badge">23</span></li> -->
-              </ul>
+      <div class="row">
+        <div class="box-body box-body-transparent">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box box-default">
+                <div class="box-head box-head-default">
+                  <h3 class="box-title">DASHBOARD</h3>
+                </div>
+                <div class="box-body box-body-default">
+                  <div class="row">
+                    <% if notice.present? %>
+                      <div class="alert alert-success">
+                        <p id="notice">
+                          <%= notice %>
+                        </p>
+                      </div>
+                      <% end %>
+                  </div>
+                  <div id="accordion">
+                    <ul class="list-group">
+                     <a href="#demo" data-toggle="collapsed"><li class="list-group-item">Clientes Cadastrados<span class="badge"><%= @clients['TOTAL'] %></span></li></a>
+                        <ul class="list-group" id="demo" class="collapse">
+                          <li  class="list-group-item collapse">Pessoa Física<span class="badge"><%= @clients['CPF'] %></span></li>
+                          <li  class="list-group-item collapse">Pessoa Jurídica<span class="badge"><%= @clients['CNPJ'] %></span></li>
+                        </ul>
+                     <li class="list-group-item">Serviços Cadastrados<span class="badge"><%= @services %></span></li> 
+                     <li class="list-group-item">Orçamentos Feitos<span class="badge">23</span></li>
+                      
+                      <!--                   <li class="list-group-item">Primera Semana<span class="badge">23</span></li>
+                    <li class="list-group-item">Primera Semana<span class="badge">23</span></li>
+                    <li class="list-group-item">Primera Semana<span class="badge">23</span></li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+
       </div>
     </div>
   </div>
-
-
-
-<!--   <div class="sb-slidebar sb-right sb-style-push">
-    
-  </div> -->
 </div>
