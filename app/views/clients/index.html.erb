@@ -65,7 +65,7 @@
                               <%= link_to client,  method: :delete, data: { confirm: 'Você tem certeza?' } do %>
                                 <i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="Excluir"></i>
                               <% end %>
-                              <a href="#"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="top" title="Fazer Orçamento"></i></a>
+                              <a href="<%= estimates_path(client.id) %>"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="top" title="Fazer Orçamento"></i></a>
                             </td>
                         </tr>
                       <% end %>

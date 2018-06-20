@@ -1,22 +1,15 @@
 Rails.application.routes.draw do
-  get 'estimate/client:references,'
-
-  get 'estimate/status:string,'
-
-  get 'estimate/price_total:string,'
-
-  get 'estimate/order_service_at:timestamp,'
-
-  get 'estimate/order_exit_at:timestamp'
-
-  resources :services
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
   resources :dashboard, only: [:index]
   resources :clients
-
+  resources :services
+  
+  get 'estimates/index/:client_id' => 'estimates#index' , as: :estimates
+  get 'estimates/new/:client_id' => 'estimates#new' , as: :new_estimate
+  
   # You can have the root of your site routed with "root"
   root 'passthrough#index'
 

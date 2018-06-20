@@ -34,11 +34,13 @@
                   </div>
                   <div id="accordion">
                     <ul class="list-group">
-                     <a href="#demo" data-toggle="collapsed"><li class="list-group-item">Clientes Cadastrados<span class="badge"><%= @clients['TOTAL'] %></span></li></a>
-                        <ul class="list-group" id="demo" class="collapse">
-                          <li  class="list-group-item collapse">Pessoa Física<span class="badge"><%= @clients['CPF'] %></span></li>
-                          <li  class="list-group-item collapse">Pessoa Jurídica<span class="badge"><%= @clients['CNPJ'] %></span></li>
-                        </ul>
+                     <a href="#clients" data-toggle="collapse" class="collapsed" aria-expanded="false"><li class="list-group-item">Clientes Cadastrados<span class="badge"><%= @clients['TOTAL'] %></span></li></a>
+                        <div  id="clients" class="collapse" aria-expanded="false">  
+                          <ul class="list-group">
+                            <li  class="list-group-item collapse">Pessoa Física<span class="badge"><%= @clients['CPF'] %></span></li>
+                            <li  class="list-group-item collapse">Pessoa Jurídica<span class="badge"><%= @clients['CNPJ'] %></span></li>
+                          </ul>
+                        </div>
                      <li class="list-group-item">Serviços Cadastrados<span class="badge"><%= @services %></span></li> 
                      <li class="list-group-item">Orçamentos Feitos<span class="badge">23</span></li>
                       

@@ -1,0 +1,112 @@
+<div id="sb-site">
+  <div class="sub-navbar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="sub-navbar-inner"><i class="sub-navbar-icon glyphicon glyphicon-th-list" style="font-size: 40px;"></i>
+            <h2 class="sub-navbar-title"></h2>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="content content-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-lg-12">
+          <div class="box">
+            <div class="box-head box-head-default">
+              <h3 class="box-title">DADOS DO CLIENTE</h3>
+<!--               <ul class="box-tools">
+                <li role="presentation">
+                  <a href="#" ng-click='print()' class="download" >
+                    <i class="icon-print hidden-print"></i><span class="sr-only">Download</span>
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+            <div class="box-body box-body-default">
+              <div class="row">
+                <div class="col-xs-8 col-lg-8">
+                  <ul class="list-unstyled">
+                    <li><b>CPF/CNPJ: </b><%= @client.document %></li>
+                    <li><b>ENDEREÇO: </b>  <%= @client.address %> - <%= @client.city %> - <%= @client.state %> - <%= @client.zipcode %></li>
+                    <li><b>RESPONSÁVEL: </b><%= @client.contact_name %></li>
+                    <li><b>TELEFONE: </b><%= @client.phone_number %></li>
+                    <li><b>CELULAR: </b><%= @client.celphone %></li>
+                    <li><b>EMAIL: </b><%= @client.email %></li>
+                  </ul>
+                </div>
+                <div class="col-xs-4 col-lg-4">
+                  <img src="#" alt="LOGO LSM" class="logo-estimate"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->      
+      <div class="row">
+        <div class="box-body box-body-transparent">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box box-default">
+                <div class="box-head box-head-default">
+                  <h3 class="box-title">LISTA DE ORÇAMENTOS</h3>
+                    <ul class="box-tools">
+                      <li role="presentation">
+                        <a href="<%= new_estimate_path(@client.id) %>">
+                          <button class="download">
+                            <i class="icon-plus"></i><span class="sr-only">Novo</span>
+                          </button>
+                         </a>
+                      </li>
+                    </ul>           
+                </div>
+                <div class="box-body box-body-default">
+                <div class="row">
+                  <% if notice.present? %>
+                    <div class="alert alert-success">                
+                      <p id="notice"><%= notice %></p>
+                    </div> 
+                  <% end %>
+                </div>                   
+                  <table class="table table-hover list-stores ">
+                    <thead>
+                      <tr>
+                        <th>CÓDIGO</th>
+                        <th>OBSERVAÇÃO</th>
+                        <th class="text-center">STATUS</th>
+                        <th class="text-center">DATA DE CADASTRO</th>
+                        <th class="text-center">AÇÕES</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% @estimates.each do |estimate| %>
+                        <tr>
+                            <td><a target="_blank" href="#"><%= estimate.id %></a></td>
+                            <td><a target="_blank" href="#"><%# estimate.observation %></a></td>
+                            <td class="text-center"><a target="_blank" href="#"><%= estimate.status %></a></td>
+                            <td class="text-center"><a target="_blank" href="#"><%= estimate.created_at.strftime("%d/%m/%Y")  %></a></td> 
+                            <td class="text-center">
+                              <a href="<%=%>"><i class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="top" title="Editar"></i></a>
+                              <% # link_to client,  method: :delete, data: { confirm: 'Você tem certeza?' } do %>
+                                <i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="Excluir"></i>
+                              <% # end %>
+                              <a href="<%= %>"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="top" title="Fazer Orçamento"></i></a>
+                            </td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
