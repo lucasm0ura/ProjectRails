@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   
   get 'estimates/index/:client_id' => 'estimates#index' , as: :estimates
   get 'estimates/new/:client_id' => 'estimates#new' , as: :new_estimate
+  post 'estimates/create/:client_id' => 'estimates#create', as: :create_estimate
   
   # You can have the root of your site routed with "root"
   root 'passthrough#index'

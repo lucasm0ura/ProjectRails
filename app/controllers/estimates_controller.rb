@@ -12,6 +12,7 @@ class EstimatesController < ApplicationController
   def new
     @estimate = Estimate.new
     @client = Client.find(params[:client_id])
+    @services = Service.all
   end
 
   def edit
