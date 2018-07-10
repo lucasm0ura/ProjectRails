@@ -3,24 +3,17 @@
     <div class="row align-self-center" style="padding-top:50px;">
       <div class="col-md-12">
         <div class="table-responsive">          
-          <table class="table">
+          <table class="table" id="tableServices">
             <thead>
               <tr>
-                <th>REFERÊNCIA</th>
-                <th>DESCRIÇÃO</th>
-                <th>VALOR UNIT.</th>
-                <th>QNTD.</th>
+                <th class="text-center">REFERÊNCIA</th>
+                <th class="text-center">DESCRIÇÃO</th>
+                <th class="text-center">VALOR UNIT.</th>
+                <th class="text-center">QNTD.</th>
                 <th>TOTAL</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>NOME DO SERVIÇO</td>
-                <td>150.00</td>
-                <td>2</td>
-                <td>300.00</td>
-              </tr>
             </tbody>
             <tfoot>
               <tr>
@@ -28,15 +21,20 @@
                 <td></td>
                 <td></td>
                 <td><b>TOTAL A PAGAR:</b></td>
-                <td>300.00</td>
+                <td id="total_estimate"></td>
               </tr>
             </tfoot>
           </table>
-        </div>        
-        <div class="col-md-2 col-md-offset-6">
-          <%= submit_tag "Salvar", class: "btn btn-primary btn-lg", id: "button_create_client" %>
-        </div>   
-      </div>                   
+        </div>  
+      </div>
+      <div class="col-md-12">
+        <label for="observation">Observações do veículo:</label>
+        <%= text_area_tag :observation, nil, class: 'form-control' %>
+      </div>        
+      <div class="col-md-2 col-md-offset-5 button_position">
+        <%= submit_tag "Salvar", class: "btn btn-primary btn-lg", id: "button_create_client" %>
+      </div>       
+
   </div>
     </div
 </div>
