@@ -21,7 +21,7 @@
                 <td></td>
                 <td></td>
                 <td><b>TOTAL A PAGAR:</b></td>
-                <td id="total_estimate"></td>
+                <td><input type="text" class="form-control" id="total_estimate" name="estimate[price_total]" value="00.00" size="20" readonly></td>
               </tr>
             </tfoot>
           </table>
@@ -29,7 +29,7 @@
       </div>
       <div class="col-md-12">
         <label for="observation">Observações do veículo:</label>
-        <%= text_area_tag :observation, nil, class: 'form-control' %>
+        <%= text_area_tag 'estimate[observation]', nil, class: 'form-control' %>
       </div>        
       <div class="col-md-2 col-md-offset-5 button_position">
         <%= submit_tag "Salvar", class: "btn btn-primary btn-lg", id: "button_create_client" %>

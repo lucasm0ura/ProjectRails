@@ -19,13 +19,13 @@ class ClientsController < ApplicationController
   # POST /clients
   # POST /clients.json
   def create
-    @client = Client.new(client_params)
-    @client.email = params[:email] if params[:email].present?
-    @client.phone_number = params[:phone_number] if params[:phone_number].present?
-    @client.celphone = params[:celphone] if params[:celphone].present?
+    client = Client.new(client_params)
+    client.email = params[:email] if params[:email].present?
+    client.phone_number = params[:phone_number] if params[:phone_number].present?
+    client.celphone = params[:celphone] if params[:celphone].present?
     
     respond_to do |format|
-      if @client.save 
+      if client.save 
         format.html { redirect_to clients_path, notice: 'Cliente criado com sucesso.' }
       else
         format.html { render :new }
