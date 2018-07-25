@@ -19,6 +19,8 @@ class EstimatesController < ApplicationController
   end
 
   def create
+    p params
+    abort
   end
   
   def update
