@@ -63,9 +63,9 @@
                             <td class="text-center">
                               <a href="<%= edit_client_path(client) %>"><i class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="top" title="Editar"></i></a>
                               <%= link_to client,  method: :delete, data: { confirm: 'Você tem certeza?' } do %>
-                                <i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="Excluir"></i>
+                                <i class="glyphicon glyphicon-trash color-delete" data-toggle="tooltip" data-placement="top" title="Excluir"></i>
                               <% end %>
-                              <a href="<%= estimates_path(client.id) %>"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="top" title="Fazer Orçamento"></i></a>
+                              <a href="<%= estimates_path(client.id) %>"><i class="glyphicon glyphicon-list-alt color-send" data-toggle="tooltip" data-placement="top" title="Fazer Orçamento"></i></a>
                             </td>
                         </tr>
                       <% end %>

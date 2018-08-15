@@ -10,7 +10,7 @@
                 <th class="text-center">DESCRIÇÃO</th>
                 <th class="text-center">VALOR UNIT.</th>
                 <th class="text-center">QNTD.</th>
-                <th>TOTAL</th>
+                <th class="text-center">TOTAL</th>
               </tr>
             </thead>
             <tbody>
@@ -30,6 +30,7 @@
       <div class="col-md-12">
         <label for="observation">Observações do veículo:</label>
         <%= text_area_tag 'estimate[observation]', nil, class: 'form-control' %>
+        <%= hidden_field_tag 'estimate[client_id]', @client.id %>
       </div>        
       <div class="col-md-2 col-md-offset-5 button_position">
         <%= submit_tag "Salvar", class: "btn btn-primary btn-lg", id: "button_create_client" %>

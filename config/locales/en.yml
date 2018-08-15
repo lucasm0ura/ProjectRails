@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+  estimates:
+    status:
+      tender: 'Proposta'
+      ordem_of_service: 'Ordem de Serviço'
+      ordem_of_exit: 'Ordem de Saída'

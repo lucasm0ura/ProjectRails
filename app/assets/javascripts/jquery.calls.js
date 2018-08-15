@@ -89,11 +89,12 @@ jQuery(document).ready(function() {
     
     if(verify){
       var mount_html = '<tr class="row-service">';
-      mount_html += '<td class="text-center"> <input type="text" class="form-control" name="estimate_service[service_id][]" value="' + service_id + '" readonly> </td>';
+      mount_html += '<td class="text-center"> <input type="text" class="form-control" name="estimate_service[][service_id]" value="' + service_id + '" readonly> </td>';
       mount_html += '<td class="text-center text-service-selected" style="width: 650px;">' + service_selected + '</td>';
-      mount_html += '<td class="text-center"><input type="text" class="form-control" id="service_price' + service_id + '" name="estimate_service[price][]"  onfocusout="calculate_amount_x_service(' + service_id + ')"></td>';
-      mount_html += '<td class="text-center"><input type="text" class="form-control" size="2" maxlength="2" id="amount_estimate' + service_id + '" name="estimate_service[amount]"  onfocusout="calculate_amount_x_service(' + service_id + ')"></td>';
-      mount_html += '<td class="text-center"><input type="text" class="form-control total_service" id="total_service' + service_id + '" name="estimate_service[total_price][]" value="" readonly></td>';
+      mount_html += '<td class="text-center"><input type="text" class="form-control" id="service_price' + service_id + '" name="estimate_service[][price]"  onfocusout="calculate_amount_x_service(' + service_id + ')"></td>';
+      mount_html += '<td class="text-center"><input type="text" class="form-control" size="2" maxlength="2" id="amount_estimate' + service_id + '" name="estimate_service[][amount]"  onfocusout="calculate_amount_x_service(' + service_id + ')"></td>';
+      mount_html += '<td class="text-center"><input type="text" class="form-control total_service" id="total_service' + service_id + '" name="estimate_service[][total_price]" value="" readonly></td>';
+      mount_html += '<td class="text-center" onclick="removeServico(' + service_id + ')"><i class="glyphicon glyphicon-trash color-delete" data-toggle="tooltip" data-placement="top" title="Excluir"></i></td>'
       mount_html += '</tr>';
 
 

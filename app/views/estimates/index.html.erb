@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
-          <div class="sub-navbar-inner"><i class="sub-navbar-icon glyphicon glyphicon-th-list" style="font-size: 40px;"></i>
+          <div class="sub-navbar-inner"><i class="sub-navbar-icon glyphicon glyphicon-list-alt" style="font-size: 40px;"></i>
             <h2 class="sub-navbar-title"></h2>
           </div>
         </div>      
@@ -75,7 +75,7 @@
                   <table class="table table-hover list-stores ">
                     <thead>
                       <tr>
-                        <th>CÓDIGO</th>
+<!--                         <th class="text-center">CÓDIGO</th> -->
                         <th>OBSERVAÇÃO</th>
                         <th class="text-center">STATUS</th>
                         <th class="text-center">DATA DE CADASTRO</th>
@@ -85,16 +85,16 @@
                     <tbody>
                       <% @estimates.each do |estimate| %>
                         <tr>
-                            <td><a target="_blank" href="#"><%= estimate.id %></a></td>
-                            <td><a target="_blank" href="#"><%# estimate.observation %></a></td>
-                            <td class="text-center"><a target="_blank" href="#"><%= estimate.status %></a></td>
+<!--                             <td class="text-center"><a target="_blank" href="#"><%# estimate.id %></a></td> -->
+                            <td><a target="_blank" href="#"><%= estimate.observation %></a></td>
+                            <td class="text-center"><a target="_blank" href="#"> <%= t("estimates.status.#{estimate.status}") %></a></td>
                             <td class="text-center"><a target="_blank" href="#"><%= estimate.created_at.strftime("%d/%m/%Y")  %></a></td> 
                             <td class="text-center">
                               <a href="<%=%>"><i class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="top" title="Editar"></i></a>
                               <% # link_to client,  method: :delete, data: { confirm: 'Você tem certeza?' } do %>
-                                <i class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="Excluir"></i>
+                                <i class="glyphicon glyphicon-trash color-delete" data-toggle="tooltip" data-placement="top" title="Excluir"></i>
                               <% # end %>
-                              <a href="<%= %>"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="top" title="Fazer Orçamento"></i></a>
+                              <a href="<%= %>"><i class="glyphicon glyphicon-send color-send" data-toggle="tooltip" data-placement="top" title="Autorizar <%= t("estimates.status.#{estimate.status}") %>"></i></a>
                             </td>
                         </tr>
                       <% end %>
